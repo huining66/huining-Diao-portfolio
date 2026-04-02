@@ -62,13 +62,6 @@ However, one piece of feedback was that adding too many annotations could become
 
 Overall, the feedback suggested that simplifying the design and improving hierarchy made the visualization more effective and easier to interpret.
 
-Results: 
-
-_Don't identify or share personally identifiable information (PII) about the people you spoke to._
-
-Results:
-
-
 Results:
 
 | Question | Interview 1 | Interview 2 |
