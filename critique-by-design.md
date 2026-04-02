@@ -1,7 +1,7 @@
 | [home page](https://cmustudent.github.io/tswd-portfolio-templates/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
 
 # Title
-Text here...
+Gold Price Visualization Redesign
 
 _For each step below, you should document your progress as you move forward.  In terms of tone, think of the writeup as though you're keeping journal of your step-by-step process.   You should include a any insights you gained from the critique method, and what it led you to think about when considering the redesign.  You should talk about how you moved next to the sketches, and any insights you gleaned from your user feedback.  Document what you changed based on the user feedback in your redesign.  Finally, talk about what your redesigned data visualization shows, why you selected the data visualization you did, and what you attempted to show or do differently._
 
@@ -9,51 +9,102 @@ _You can include screenshots, sketches or other artifacts with your narrative to
 
 ## Step one: the visualization
 
-_Include link to the original data visualization (or screenshot - make sure to correctly cite your sources, etc.).  Include paragraph or two on why you selected this particular data visualization.  For obvious reasons, the data visualization you select should come from a publicly accessible source._
+**Original Visualization:** Live Gold Spot Price  
+**Source:** BullionVault  
+**Link:** (https://www.bullionvault.com/gold-price-chart.do)
+![Original Chart]
+<img width="558" height="630" alt="original" src="https://github.com/user-attachments/assets/179c605c-72fc-46fa-90a2-783bb965cd89" />
+
+I chose this visualization because it presents real-time financial data that should be quick to understand, but the current design makes it harder than expected to interpret.
+
+The chart includes detailed information, but it lacks clear hierarchy and focus. It is difficult to quickly identify trends or understand what the most important takeaway is. Because of this, I thought it would be a good candidate for redesign.
+
+The visualization is publicly accessible and represents real-world financial data.
 
 ## Step two: the critique
-_Don't forget to complete the Google Form found on the assignment page.  You can summarize your thoughts here._
+
+The visualization provides a large amount of information, but it is not immediately clear what the main takeaway is. The chart combines multiple elements such as price trends, time ranges, and numerical values, which creates visual clutter. There is no strong visual hierarchy guiding the viewer toward the most important insight.
+
+One key issue is that the chart relies heavily on fine-grained detail without emphasizing broader trends. For example, the frequent fluctuations in the gold price line make it difficult to identify overall patterns at a glance. Additionally, the use of similar colors and lack of clear labeling reduces readability.
+
+Another issue is the separation between the chart and the summary statistics (such as current price, weekly high, and weekly low). These pieces of information are visually disconnected, forcing the viewer to mentally combine them.
+
+Overall, while the visualization is informative, it prioritizes completeness over clarity. As a result, it is harder for users to quickly understand the key message.
 
 ## Step three: Sketch a solution
 
+<img width="254" height="333" alt="Screenshot 2026-04-01 at 21 44 21" src="https://github.com/user-attachments/assets/28687938-b5c3-4dd5-94ca-d531b101f2f5" />
+
+In my sketches, I focused on simplifying the layout and improving visual hierarchy. I explored designs that reduce unnecessary detail and emphasize the main trend of gold prices over time.
+
+One idea was to smooth the price line to highlight the overall trend instead of short-term fluctuations. I also considered separating the key metrics (current price, weekly change) and placing them prominently at the top of the visualization.
+
+Another design choice was to use clearer color contrast to distinguish between different elements. For example, using one strong color for the main trend and lighter tones for secondary information.
+
+I also experimented with adding annotations to highlight important moments, such as sharp increases or decreases in price. This helps guide the viewer's attention and makes the chart more storytelling-oriented.
+
 ## Step four: Test the solution
 
-_Before you conduct your interviews, prepare a simple script.  Use this as a guide and as a way to take notes as you go forward. Come up with your own list of questions you want to ask for the selected visualization. Keep the questions broad so you can get the most value out of your feedback. Then, document answers to your questions here._
+I shared my redesigned sketch with two peers and asked them a few questions about their understanding.
 
-Questions to ask (modify these for your own interviews): 
+Both participants were able to quickly identify the main trend of the gold price in the redesigned version. They mentioned that the simplified line made it easier to understand whether the price was increasing or decreasing overall.
 
-- Can you tell me what you think this is?
+One participant noted that separating the key statistics at the top made the chart more intuitive, since they could immediately see the current price before looking at the trend.
 
-- Can you describe to me what this is telling you?
+However, one piece of feedback was that adding too many annotations could become distracting. Based on this, I decided to keep only the most important annotations in the final design.
 
-- Is there anything you find surprising or confusing?
-
-- Who do you think is the intended audience for this?
-
-- Is there anything you would change or do differently?
+Overall, the feedback suggested that simplifying the design and improving hierarchy made the visualization more effective and easier to interpret.
 
 Results: 
 
 _Don't identify or share personally identifiable information (PII) about the people you spoke to._
 
+Results:
+
+
+Results:
 
 | Question | Interview 1 | Interview 2 |
-|----------|-------------|-------------|
-|          |             |             |
-|          |             |             |
-|          |             |             |
+|----------|------------|------------|
+| What do you think this is? | A chart showing gold price over time | A price trend of gold in recent days |
+| What is it telling you? | The price fluctuates but overall slightly increases | There is volatility but the main trend is unclear |
+| Anything confusing? | Too many small fluctuations, hard to see big picture | Layout feels cluttered and key info is not obvious |
+| Intended audience? | Investors or people tracking gold prices | People interested in financial markets |
+| What would you change? | Simplify the line and highlight key points | Make the trend clearer and separate key numbers |
 
-Synthesis: 
+Synthesis:
 
-_What patterns in the feedback emerge?  What did you learn from the feedback?  Based on this feedback, come up with what design changes you think might make the most sense in your final redesign._
+Across both interviews, a consistent pattern emerged: while users understood that the chart represents gold prices, they struggled to quickly identify the main trend.
+
+Both participants mentioned that the visualization contains too much detail, especially the short-term fluctuations, which makes it difficult to see the bigger picture. They also pointed out that important information, such as the current price and overall trend, is not emphasized clearly.
+
+Another common theme was that the layout feels cluttered and lacks hierarchy. Users had to spend extra time interpreting the chart instead of immediately understanding it.
+
+Based on this feedback, I decided to focus my redesign on three main improvements. First, simplifying the line to highlight the overall trend rather than small fluctuations. Second, improving visual hierarchy by separating key metrics from the chart. Third, reducing clutter and using clearer visual cues to guide attention.
+
+These changes aim to make the visualization more intuitive and allow users to quickly grasp the most important insights.
 
 ## Step five: build the solution
 
-_Include and describe your final solution here. It's also a good idea to summarize your thoughts on the process overall. When you're done with the assignment, this page should all the items mentioned in the assignment page on Canvas(a link or screenshot of the original data visualization, documentation explaining your process, a summary of your wireframes and user feedback, your final, redesigned data visualization, etc.)._
+![Final Visualization](final.png)
+<img width="246" height="327" alt="Screenshot 2026-04-01 at 21 44 41" src="https://github.com/user-attachments/assets/6b4fc308-5344-4ff9-b219-6b4bc6e96a5a" />
+
+In the final redesigned visualization, I focused on clarity, hierarchy, and storytelling.
+
+First, I simplified the line chart to emphasize the overall trend rather than short-term fluctuations. This makes it easier for viewers to quickly understand how gold prices have changed over time.
+
+Second, I reorganized the layout by placing key information, such as the current price and weekly change, at the top. This allows users to immediately grasp the most important data before exploring the chart.
+
+Third, I improved the use of color and contrast to guide attention. The main trend is highlighted using a stronger color, while secondary elements are more muted.
+
+Finally, I reduced unnecessary visual clutter and only included essential annotations. This helps maintain focus while still providing useful context.
+
+Overall, the redesigned visualization better communicates the key message and allows users to quickly understand the data.
 
 ## References
-_List any references you used here._
+BullionVault. Live Gold Price Chart. https://www.bullionvault.com/gold-price-chart.do
 
 ## AI acknowledgements
-_If you used AI to help you complete this assignment (within the parameters of the instruction and course guidelines), detail your use of AI for this assignment here._
-
+**
+I used ChatGPT to help me organize my ideas and improve clarity in writing. All design work and decisions are my own.
+**
