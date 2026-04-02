@@ -86,20 +86,17 @@ These changes aim to make the visualization more intuitive and allow users to qu
 
 ## Step five: build the solution
 
-
 <img width="246" height="327" alt="Screenshot 2026-04-01 at 21 44 41" src="https://github.com/user-attachments/assets/6b4fc308-5344-4ff9-b219-6b4bc6e96a5a" />
 
-In the final redesigned visualization, I focused on clarity, hierarchy, and storytelling.
+The final redesigned visualization focuses on simplifying the presentation and making the overall trend of gold prices easier to understand. Instead of showing excessive small fluctuations, the design emphasizes a cleaner and more readable line that highlights the main pattern over time.
 
-First, I simplified the line chart to emphasize the overall trend rather than short-term fluctuations. This makes it easier for viewers to quickly understand how gold prices have changed over time.
+I chose this design because a simplified line chart is the most effective way to communicate overall trends over time. The goal is to allow users to quickly grasp the direction of price changes without being distracted by unnecessary details.
 
-Second, I reorganized the layout by placing key information, such as the current price and weekly change, at the top. This allows users to immediately grasp the most important data before exploring the chart.
+This redesigned visualization shows the overall trend of gold prices more clearly, allowing users to immediately understand whether prices are generally increasing or decreasing.
 
-Third, I improved the use of color and contrast to guide attention. The main trend is highlighted using a stronger color, while secondary elements are more muted.
+Compared to the original, this design reduces visual clutter and improves readability. It also establishes a clearer visual hierarchy, making it easier for users to interpret the data at a glance and with less cognitive effort.
 
-Finally, I reduced unnecessary visual clutter and only included essential annotations. This helps maintain focus while still providing useful context.
-
-Overall, the redesigned visualization better communicates the key message and allows users to quickly understand the data.
+Overall, the redesign aims to balance clarity and accuracy by keeping the essential information while removing distractions.
 
 ## References
 BullionVault. Live Gold Price Chart. https://www.bullionvault.com/gold-price-chart.do
