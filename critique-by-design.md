@@ -12,7 +12,7 @@ _You can include screenshots, sketches or other artifacts with your narrative to
 **Original Visualization:** Live Gold Spot Price  
 **Source:** BullionVault  
 **Link:** (https://www.bullionvault.com/gold-price-chart.do)
-![Original Chart]
+
 <img width="558" height="630" alt="original" src="https://github.com/user-attachments/assets/179c605c-72fc-46fa-90a2-783bb965cd89" />
 
 I chose this visualization because it presents real-time financial data that should be quick to understand, but the current design makes it harder than expected to interpret.
