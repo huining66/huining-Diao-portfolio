@@ -86,7 +86,7 @@ These changes aim to make the visualization more intuitive and allow users to qu
 
 ## Step five: build the solution
 
-![Final Visualization](final.png)
+
 <img width="246" height="327" alt="Screenshot 2026-04-01 at 21 44 41" src="https://github.com/user-attachments/assets/6b4fc308-5344-4ff9-b219-6b4bc6e96a5a" />
 
 In the final redesigned visualization, I focused on clarity, hierarchy, and storytelling.
