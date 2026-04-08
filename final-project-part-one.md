@@ -1,42 +1,72 @@
-| [home page](https://cmustudent.github.io/tswd-portfolio-templates/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
+| [home page](https://huining66.github.io/huining-Diao-portfolio/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
 
 
 > Important note: this template includes major elements of Part I, but the instructions on Canvas are the authoritative source.  Make sure to read through the assignment page and review the rubric to confirm you have everything you need before submitting.  When done, delete these instructions before submitting.
 
 # Outline
-> Include a high-level summary of your project.  This should be a couple paragraphs that describe what you're interested in showing with your final project. 
- 
-Text here...
+This project explores the relationship between working hours and happiness levels across countries. While many people assume that working more leads to greater productivity and success, it is not always clear how working hours affect overall well-being.
 
-> A project structure that outlines the major elements of your story.  Your Good Charts text talks about story structure in Chapter 8 - you should describe what you hope to achieve.  Make sure the outline is detailed enough that we can see how you anticipate your story unfolding.  You can incorporate your Story Arc from the in-class exercise along with your user stories and one sentence summary to make the topic even more clear. 
+The goal of this project is to examine whether countries with longer working hours tend to have lower happiness levels, and to identify patterns across different regions. By visualizing this relationship, I aim to make it easier for a general audience to understand how work intensity may influence quality of life.
 
-Text here...
+The intended audience is students and young professionals who are interested in work-life balance and global lifestyle differences. The focus will be on presenting clear comparisons and highlighting key insights in an accessible way.
+
+This project will follow a structured narrative:
+
+1. Introduction: Introduce the idea of work-life balance and pose the question: “Do longer working hours make people less happy?”
+2. Context: Explain how working hours and happiness are measured
+3. Comparison: Show a scatter plot comparing working hours and happiness scores across countries
+4. Key Insight: Highlight trends, clusters, or outliers (e.g., countries that work less but are happier)
+5. Conclusion: Summarize findings and connect to real-world implications
+
+This structure helps guide the audience from a general question to specific insights supported by data.
 
 ## Initial sketches
-> Post images of your anticipated data visualizations (sketches are fine). They should mimic aspects of your outline, and include elements of your story.  
+I created initial sketches to plan how the data will be presented.
 
-Text here...
+The sketches include:
+
+A scatter plot showing working hours on the x-axis and happiness scores on the y-axis
+Highlighted points for specific countries to draw attention
+Labels or annotations to emphasize key patterns
+
+This design allows viewers to quickly identify whether there is a relationship between working hours and happiness.
+![无标题的笔记本 (2)](https://github.com/user-attachments/assets/33017e8e-7fb3-41a9-b256-a4e000fa1f26)
+
 
 # The data
-> A couple of paragraphs that document your data source(s), and an explanation of how you plan on using your data. 
+The data for this project comes from publicly available sources:
 
-Text here...
+Average annual working hours by country (OECD)
+World Happiness Report dataset
 
-> A link to the publicly-accessible datasets you plan on using, or a link to a copy of the data you've uploaded to your Github repository, Box account or other publicly-accessible location. Using a datasource that is already publicly accessible is highly encouraged.  If you anticipate using a data source other than something that would be publicly available please talk to me first. 
+These datasets include:
 
-| Name | URL | Description |
-|------|-----|-------------|
-|      |     |             |
-|      |     |             |
-|      |     |             |
+Country names
+Average working hours per year
+Happiness scores
+
+I will combine these datasets to analyze the relationship between work intensity and well-being.
+
+The dataset will be cleaned and merged using Python (pandas), ensuring that country names are consistent across sources.
+
+
+| Name                        | URL                                                                 | Description                                      |
+|-----------------------------|----------------------------------------------------------------------|--------------------------------------------------|
+| OECD Working Hours Data     | https://data.oecd.org/emp/hours-worked.htm                           | Average annual working hours per worker by country |
+| World Happiness Report 2015 | https://www.kaggle.com/datasets/unsdsn/world-happiness               | Happiness scores and rankings across countries   |
+| GitHub Dataset Copy         | https://github.com/huining66/huining-Diao-portfolio/blob/main/data.csv | Cleaned dataset prepared for analysis            |
 
 # Method and medium
-> In a few sentences, you should document how you plan on completing your final project. 
+This project will be completed using Python (Google Colab) for data cleaning and merging datasets. Initial visualizations will also be created in Python.
 
-Text here...
+For the final presentation, I plan to use Tableau or an interactive storytelling platform to create a web-based data story.
+
+The final deliverable will be an interactive visualization that allows users to explore the relationship between working hours and happiness across countries.
 
 ## References
-_List any references you used here._
+OECD Data: https://data.oecd.org/
+World Happiness Report: https://worldhappiness.report/
+World Happiness Report 2015 https://www.kaggle.com/datasets/unsdsn/world-happiness
 
 ## AI acknowledgements
-_If you used AI to help you complete this assignment (within the parameters of the instruction and course guidelines), detail your use of AI for this assignment here._
+I used Microsoft Copilot to help brainstorm ideas and improve clarity of writing. All final content was reviewed and refined by me to ensure it meets course expectations.
