@@ -29,14 +29,16 @@ Explain what “working hours” and “happiness score” represent and where t
 
 **Planned Visual:** Metric explanation cards / short methodology block
 
-
+<img width="532" height="351" alt="Screenshot 2026-04-15 at 21 04 17" src="https://github.com/user-attachments/assets/b796d7e6-e935-495c-9ad3-a22fce694d73" />
 
 ---
 
-### Section 3 – Main Comparison Visualization
+### Section 3 – Main Comparison Visualiz<img width="539" height="355" alt="Screenshot 2026-04-15 at 21 05 25" src="https://github.com/user-attachments/assets/dc444428-519c-49b5-ae46-4dfcb88480ff" />
+ation
 Show the core scatter plot comparing annual working hours to happiness score across countries.
 
 **Planned Visualization:** Scatter Plot
+<img width="538" height="360" alt="Screenshot 2026-04-15 at 21 04 43" src="https://github.com/user-attachments/assets/9a5d730e-fc3f-4c5e-9555-6437617082ed" />
 
 
 ---
@@ -48,6 +50,7 @@ Focus on countries that differ from the overall pattern and discuss possible exp
 - Annotated outlier callouts
 - Country highlight cards
 
+<img width="539" height="361" alt="Screenshot 2026-04-15 at 21 06 37" src="https://github.com/user-attachments/assets/2fde3d37-aaf8-4a90-b828-34d36f61c926" />
 
 
 ---
@@ -57,7 +60,7 @@ Summarize the relationship and provide concluding interpretation.
 
 **Planned Visual:** Key takeaway summary / final annotated statement
 
-<img width="234" height="141" alt="Screenshot 2026-04-15 at 20 58 40" src="https://github.com/user-attachments/assets/a3240b4d-c687-4fd2-9f2f-410c911ca60b" />
+<img width="539" height="357" alt="Screenshot 2026-04-15 at 21 07 25" src="https://github.com/user-attachments/assets/233cd240-d41e-4652-817f-912d1805bd7e" />
 
 
 ---
@@ -70,7 +73,8 @@ Below are draft visualizations developed for the story.
 
 This visualization compares average annual working hours against happiness score for each country. The goal is to identify whether there is an observable relationship between work intensity and well-being.
 
-![Scatter Plot Draft](INSERT_IMAGE_LINK_HERE)
+<img width="537" height="360" alt="Screenshot 2026-04-15 at 21 09 01" src="https://github.com/user-attachments/assets/5eb808bc-1ef3-4cda-b9cf-34e00fd80091" />
+
 
 ---
 
@@ -78,7 +82,8 @@ This visualization compares average annual working hours against happiness score
 
 To add additional context, I created a grouped comparison showing average working hours and happiness by region. This helps contextualize broader geographic patterns.
 
-![Regional Comparison Draft](INSERT_IMAGE_LINK_HERE)
+<img width="533" height="350" alt="Screenshot 2026-04-15 at 21 09 58" src="https://github.com/user-attachments/assets/59da321c-5a52-4ce3-910f-552be0be42d9" />
+
 
 ---
 
@@ -86,14 +91,14 @@ To add additional context, I created a grouped comparison showing average workin
 
 This visualization highlights countries that differ substantially from the overall trend.
 
-![Outlier Comparison Draft](INSERT_IMAGE_LINK_HERE)
+<img width="536" height="356" alt="Screenshot 2026-04-15 at 21 10 37" src="https://github.com/user-attachments/assets/f4cbeb58-2f0d-4712-882d-23bad2613884" />
+
 
 ---
 
 # User Research
 
 ## Target Audience
-<img width="236" height="142" alt="Screenshot 2026-04-15 at 20 58 00" src="https://github.com/user-attachments/assets/edd55052-f078-49fe-9cfd-60f59d5891fd" />
 
 The intended audience for this story is college students and young professionals interested in work-life balance, career culture, and global quality-of-life comparisons.
 
