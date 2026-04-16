@@ -33,8 +33,7 @@ Explain what “working hours” and “happiness score” represent and where t
 
 ---
 
-### Section 3 – Main Comparison Visualiz<img width="539" height="355" alt="Screenshot 2026-04-15 at 21 05 25" src="https://github.com/user-attachments/assets/dc444428-519c-49b5-ae46-4dfcb88480ff" />
-ation
+### Section 3 – Main Comparison Visualization
 Show the core scatter plot comparing annual working hours to happiness score across countries.
 
 **Planned Visualization:** Scatter Plot
