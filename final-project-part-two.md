@@ -1,68 +1,167 @@
-| [home page](https://cmustudent.github.io/tswd-portfolio-templates/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
+| [home page](https://huining66.github.io/huining-Diao-portfolio/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
 
-# Wireframes / storyboards
-> Using your sketches developed last week, further develop your story outline and relevant components visually through the use of wireframing / storyboards. Using your outline as a guide, include high-fidelity, individual draft data visualizations of the critical elements of your story you want to share with your reader. Note: you can build these elements out directly in Shorthand this week if you wish.  Reminder: this template is intended to help, but it doesn't substitute for reading through the full homework assignment!  The assignment page on Canvas includes many important details for completing Part II of the final project. 
+# Wireframes / Storyboards
 
-Text here!
+To further develop my final project concept, I created a storyboard and draft wireframes for how the reader will progress through the narrative. The goal is to guide the audience from an engaging opening question into increasingly detailed evidence about the relationship between work-life balance and happiness.
 
-# User research 
+My planned story structure is:
 
-## Target audience
-> Include your approach to identifying representative individuals, and who you hope to reach with your story. 
+1. Introduce the central question: **Do longer working hours make people less happy?**
+2. Provide context about how working hours and happiness are measured
+3. Present the core comparison between working hours and happiness
+4. Highlight notable country outliers and regional patterns
+5. Conclude with implications related to work-life balance
 
-Text here!
+## Storyboard Overview
 
-## Interview script
-> List the goals from your research, and the questions you intend to ask. 
+### Section 1 – Opening Hook
+Introduce the topic with a provocative framing question and short contextual setup.
 
-Text here!
+**Planned Visual:** Hero text / opening statistic / introductory graphic
+
+<img width="537" height="354" alt="Screenshot 2026-04-15 at 20 55 12" src="https://github.com/user-attachments/assets/a0a62098-e041-4a46-ae54-35ad941e0579" />
+
+
+---
+
+### Section 2 – Context / Metric Explanation
+Explain what “working hours” and “happiness score” represent and where the data comes from.
+
+**Planned Visual:** Metric explanation cards / short methodology block
+
+
+
+---
+
+### Section 3 – Main Comparison Visualization
+Show the core scatter plot comparing annual working hours to happiness score across countries.
+
+**Planned Visualization:** Scatter Plot
+
+
+---
+
+### Section 4 – Highlight Key Patterns / Outliers
+Focus on countries that differ from the overall pattern and discuss possible explanations.
+
+**Planned Visualizations:**
+- Annotated outlier callouts
+- Country highlight cards
+
+
+
+---
+
+### Section 5 – Conclusion / Takeaway
+Summarize the relationship and provide concluding interpretation.
+
+**Planned Visual:** Key takeaway summary / final annotated statement
+
+<img width="234" height="141" alt="Screenshot 2026-04-15 at 20 58 40" src="https://github.com/user-attachments/assets/a3240b4d-c687-4fd2-9f2f-410c911ca60b" />
+
+
+---
+
+# Draft Data Visualizations
+
+Below are draft visualizations developed for the story.
+
+## Main Scatter Plot: Working Hours vs Happiness
+
+This visualization compares average annual working hours against happiness score for each country. The goal is to identify whether there is an observable relationship between work intensity and well-being.
+
+![Scatter Plot Draft](INSERT_IMAGE_LINK_HERE)
+
+---
+
+## Regional Comparison
+
+To add additional context, I created a grouped comparison showing average working hours and happiness by region. This helps contextualize broader geographic patterns.
+
+![Regional Comparison Draft](INSERT_IMAGE_LINK_HERE)
+
+---
+
+## Outlier Country Comparison
+
+This visualization highlights countries that differ substantially from the overall trend.
+
+![Outlier Comparison Draft](INSERT_IMAGE_LINK_HERE)
+
+---
+
+# User Research
+
+## Target Audience
+<img width="236" height="142" alt="Screenshot 2026-04-15 at 20 58 00" src="https://github.com/user-attachments/assets/edd55052-f078-49fe-9cfd-60f59d5891fd" />
+
+The intended audience for this story is college students and young professionals interested in work-life balance, career culture, and global quality-of-life comparisons.
+
+To gather representative feedback, I selected three individuals who broadly match this audience profile:
+
+- Graduate student, 20s
+- Graduate student, 20s
+- Early-career professional, 20s
+
+These interviewees were chosen because they are likely to find the topic personally relevant and represent the type of audience I hope will engage with this story.
+
+---
+
+## Interview Script
+
+The goal of the user research was to determine whether the draft story structure and visualizations were clear, engaging, and easy to follow.
 
 | Goal | Questions to Ask |
 |------|------------------|
-|      |                  |
-|      |                  |
-|      |                  |
+| Evaluate opening impact | What is your first impression of this story/topic? |
+| Assess chart comprehension | Is the main scatter plot easy to understand? Why or why not? |
+| Test narrative structure | Does the order of the story feel logical? |
+| Identify unclear elements | Was any part confusing or difficult to interpret? |
+| Gather improvement ideas | What would make this story more engaging or clearer? |
 
+---
 
-Text here!
+# Interview Findings
 
-## Interview findings
-> Detail the findings from your interviews.  Do not include PII.  Capture specific insights where possible.
+Three interviews were conducted after showing participants the wireframes and draft visualizations.
 
-Text here!
+| Questions | Interview 1 (Graduate Student, 20s) | Interview 2 (Graduate Student, 20s) | Interview 3 (Early-career Professional, 20s) |
+|----------|--------------------------------------|--------------------------------------|----------------------------------------------|
+| First impression? | Interesting and relevant topic | Relatable and engaging | Strong opening question |
+| Is the scatter plot understandable? | Mostly, but trend line would help | Needed more labels/annotations | Clear overall but could use highlighted examples |
+| Does the story flow logically? | Yes | Mostly yes | Yes, though middle section could be shorter |
+| Anything confusing? | Happiness score definition unclear | Wanted more explanation of outliers | Regional differences needed context |
+| Suggestions? | Add trend line | Add metric definitions | Add regional grouping/color coding |
 
-| Questions               | Interview 1 (briefly describe) | Interview 2 | Interview 3 |
-|-------------------------|--------------------------------|-------------|-------------|
-| Question you asked here | Insightful feedback            |             |             |
-|                         |                                |             |             |
-|                         |                                |             |             |
+---
 
+# Identified Changes for Part III
 
-# Identified changes for Part III
-> Document the changes you plan on implementing next week to address any issues identified.  
+Based on the interview feedback, I plan to implement the following revisions in Part III.
 
-Text here!
+| Research synthesis | Anticipated changes for Part III |
+|-------------------|----------------------------------|
+| Users wanted clearer trend visibility | Add regression/trend line to scatter plot |
+| Users requested better explanation of outliers | Add annotations for notable countries |
+| Happiness score methodology was unclear | Include brief explanation of happiness metric |
+| Story pacing felt text-heavy in middle | Reduce text and improve transitions |
+| Users wanted broader contextual grouping | Add regional color coding / segmentation |
 
-| Research synthesis                       | Anticipated changes for Part III                                                |
-|------------------------------------------|---------------------------------------------------------------------------------|
-| Findings or observations from interviews | Describe what, if any changes you anticipate making to address the observation. |
-|                                          |                                                                                 |
-|                                          |                                                                                 |
-|                                          |                                                                                 |
-| ...add more rows as necessary            |                                                                                 |
+---
 
-> ...include any final thoughts you have here. 
+Overall, the interviews suggested that the project concept is engaging and understandable, but the visualizations would benefit from additional explanatory context and clearer annotations. These findings will help guide the refinement of the final story in Part III.
 
-Text here!
+---
 
-# Moodboards / personas
-> If you did this optional part, include details here.  Otherwise remove this section
+# References
 
-Text here!
+- OECD Data: https://data.oecd.org/emp/hours-worked.htm
+- World Happiness Report: https://worldhappiness.report/
+- World Happiness Report Dataset: https://www.kaggle.com/datasets/unsdsn/world-happiness
 
-## References
-_List any references you used here._
+---
 
-## AI acknowledgements
-_If you used AI to help you complete this assignment (within the parameters of the instruction and course guidelines), detail your use of AI for this assignment here._
+# AI Acknowledgements
+
+I used Microsoft Copilot to help brainstorm interview questions, and refine the wording of this write-up. All project decisions, analysis, and final written content were reviewed and edited by me.
 
