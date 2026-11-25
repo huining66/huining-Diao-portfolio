@@ -27,11 +27,30 @@ def model(d,controls):
     return dict(n=int(fit.nobs),slope=float(fit.params.hours100),lo=float(ci.iloc[0]),hi=float(ci.iloc[1]),r2=float(fit.rsquared))
 models={'full_unadjusted':model(a,False),'matched_unadjusted':model(b,False),'matched_adjusted':model(b,True)}
 geo=fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
+def compact_geometry(geometry):
+    if geometry is None:
+        return None
+    def compact_ring(ring):
+        points=[]
+        for x,y,*_ in ring:
+            p=[round(x,2),round(y,2)]
+            if not points or points[-1]!=p:
+                points.append(p)
+        if points and points[0]!=points[-1]:
+            points.append(points[0])
+        return points if len(points)>=4 else ring
+    kind=geometry['type']
+    coords=geometry['coordinates']
+    if kind=='Polygon':
+        coords=[compact_ring(r) for r in coords]
+    elif kind=='MultiPolygon':
+        coords=[[compact_ring(r) for r in poly] for poly in coords]
+    return {'type':kind,'coordinates':coords}
 features=[]
 for f in geo['features']:
     p=f['properties'];code=p.get('ISO3166-1-Alpha-3',p.get('ISO_A3'))
     if code and code!='-99':
-        features.append({'type':'Feature','properties':{'code':code},'geometry':f['geometry']})
+        features.append({'type':'Feature','properties':{'code':code},'geometry':compact_geometry(f['geometry'])})
 assert len(features)>100
 (out/'countries.geojson').write_text(json.dumps({'type':'FeatureCollection','features':features},separators=(',',':')))
 (out/'models.json').write_text(json.dumps({'models':models,'source':url,'excluded':a.loc[a.gdp_ppp.isna(),'Entity'].tolist()},indent=2))
