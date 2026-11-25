@@ -15,14 +15,14 @@ jobs:
           set -euo pipefail
           base=https://huining66.github.io/huining-Diao-portfolio/
           for attempt in $(seq 1 12); do
-            if curl -fsSL --max-time 20 "$base" -o /tmp/home.html && grep -Fq 'Huining Diao | Professional Portfolio' /tmp/home.html && grep -Fq 'Evidence, not just prototypes.' /tmp/home.html; then
+            if curl -fsSL --max-time 20 "$base" -o /tmp/home.html && grep -Fq 'Huining Diao | Professional Portfolio' /tmp/home.html && grep -Fq 'Research backed by evidence' /tmp/home.html; then
               echo 'Canonical public homepage: current professional portfolio verified'
               break
             fi
             if [ "$attempt" = 12 ]; then exit 1; fi
             sleep 10
           done
-          for path in research-lab.html dashboard.html research-churn.html research-macro.html research-pipeline.html assets/research/shap_summary.png; do
+          for path in research-lab.html dashboard.html research-churn.html research-macro.html research-pipeline.html wellbeing.html assets/research/shap_summary.png; do
             curl -fsSL --max-time 30 "$base$path" -o /dev/null
             echo "Public resource verified: $path"
           done

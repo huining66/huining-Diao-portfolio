@@ -151,19 +151,30 @@ jobs:
               await page.locator('#compare-b').selectOption('China');
               await check('comparison','-539 annual hours');
               await check('comparison','0.752');
-              await page.waitForSelector('#world-map path[tabindex="0"]');
-              await page.locator('#world-map path[tabindex="0"]').first().focus();
-              if(!(await page.locator('#map-detail').textContent()).includes('hours'))failures.push('map inspection failed');
-              await page.locator('#world-map path').first().evaluate(e=>e.dataset.reuseCheck='yes');
+              const map=page.locator('#world-map');
+              await page.locator('#map-country').selectOption({label:'France'});
+              await check('map-detail','France');
+              if(await map.locator('[data-selected]').getAttribute('data-country')!=='FRA')failures.push('map selection failed');
+              await page.locator('#map-in').click();
+              const zoomedView=await map.getAttribute('viewBox');
+              if(zoomedView==='0 0 720 360')failures.push('map zoom failed');
+              await map.press('ArrowRight');
+              if(await map.getAttribute('viewBox')===zoomedView)failures.push('map keyboard pan failed');
+              await page.locator('#map-reset').click();
+              if(await map.getAttribute('viewBox')!=='0 0 720 360')failures.push('map reset failed');
+              const france=map.locator('[data-country="FRA"]');
+              const initialFill=await france.getAttribute('fill');
+              await france.evaluate(e=>e.dataset.reuseCheck='yes');
               await page.locator('#map-metric').selectOption('hours');
-              if(await page.locator('#world-map path').first().getAttribute('data-reuse-check')!=='yes')failures.push('map geometry unnecessarily rebuilt');
+              if(await france.getAttribute('fill')===initialFill)failures.push('map metric color unchanged');
+              if(await france.getAttribute('data-reuse-check')!=='yes')failures.push('map geometry unnecessarily rebuilt');
               await page.waitForSelector('#extended-results table');
               if(await page.locator('#extended-results tr').count()!==4)failures.push('model table incomplete');
               for(const path of ['report.pdf','matched-gdp.csv','models.json']){
                 const response=await page.request.get('http://localhost:8765/data/wellbeing/'+path);
                 if(!response.ok())failures.push('missing extended output '+path);
               }
-              const coverage=await page.locator('#world-map path[tabindex="0"]').count();
+              const coverage=await page.locator('#world-map path[data-country]').count();
               if(coverage<100)failures.push('map coverage below 100: '+coverage);
               await page.locator('#region').selectOption('Oceania');
               if(await page.locator('#scatter line[stroke="#b45309"]').count())failures.push('small sample trend displayed');
