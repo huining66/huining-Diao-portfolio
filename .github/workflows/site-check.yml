@@ -83,6 +83,16 @@ jobs:
               await page.locator('#compare-b').selectOption('China');
               await check('comparison','-539 annual hours');
               await check('comparison','0.752');
+              await page.waitForSelector('#world-map path[tabindex="0"]');
+              await page.locator('#world-map path[tabindex="0"]').first().focus();
+              if(!(await page.locator('#map-detail').textContent()).includes('hours'))failures.push('map inspection failed');
+              await page.locator('#map-metric').selectOption('hours');
+              await page.waitForSelector('#extended-results table');
+              if(await page.locator('#extended-results tr').count()!==4)failures.push('model table incomplete');
+              for(const path of ['report.pdf','matched-gdp.csv','models.json']){
+                const response=await page.request.get('http://localhost:8765/data/wellbeing/'+path);
+                if(!response.ok())failures.push('missing extended output '+path);
+              }
               await page.close();
             }
             await browser.close();
