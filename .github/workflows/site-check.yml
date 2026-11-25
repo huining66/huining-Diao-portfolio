@@ -52,6 +52,14 @@ jobs:
                 console.log(width,file,issues.length?'FAIL':'PASS');
               }
               await page.goto('http://localhost:8765/');
+              if(await page.locator('#featured article').count()!==3)failures.push('featured research count incorrect');
+              if(await page.locator('#skill-evidence article').count()!==4)failures.push('skill evidence count incorrect');
+              if(await page.locator('#journey details').count()!==6)failures.push('career milestones count incorrect');
+              const milestone=page.locator('#journey details').first();
+              await milestone.locator('summary').click();
+              if(await milestone.getAttribute('open')===null)failures.push('career milestone expansion failed');
+              await milestone.locator('summary').click();
+              if(await milestone.getAttribute('open')!==null)failures.push('career milestone collapse failed');
               await page.locator('#studio-search').click();
               await page.locator('#studio-query').fill('SHAP');
               if(await page.locator('#studio-results a').count()!==1)failures.push('global search failed');
