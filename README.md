@@ -1,65 +1,77 @@
 
-# Huining Diao | Personal Portfolio
+# Huining Diao
 
-**Financial Markets · Data Science · Economics · Technology**
+### Financial Markets | Data Science | Technology
 
-Carnegie Mellon University | Master of Information Systems Management
-
-The Ohio State University | B.A. in Economics, Magna Cum Laude
+**Carnegie Mellon University** — Master of Information Systems Management  
+**The Ohio State University** — B.A. in Economics, Magna Cum Laude
 
 ---
 
-## About Me
+## Professional Profile
 
-I am interested in the intersection of economics, financial markets, data science, and technology.
+My interests lie at the intersection of economics, financial markets, data science, and technology.
 
-My academic background in economics, history, and information systems has shaped how I approach complex problems — combining quantitative analysis with an understanding of the broader context behind the data.
+I am particularly interested in how quantitative analysis and information systems can help explain complex economic and business phenomena, uncover meaningful patterns, and support better decisions.
 
-This portfolio brings together selected academic projects that reflect my interests in analytical thinking, financial research, data visualization, and data-driven decision-making.
+My interdisciplinary background in economics, history, and information systems allows me to approach analytical problems from both a technical and a broader strategic perspective.
+
+This portfolio presents selected work in financial analytics, quantitative research, data visualization, and digital storytelling.
 
 ---
 
 ## Selected Projects
 
-### 01. Gold Price Visualization Redesign
+### 01 — Gold Market Analytics & Visualization
 
-**Financial Markets | Data Visualization | User Research**
+*Financial Markets · Visual Analytics · User Research*
 
-A financial data visualization project exploring how visual design can improve the interpretation and communication of gold price trends.
+A financial data visualization project examining how the design and presentation of historical gold price data influence interpretation and analytical understanding.
 
-The project incorporates visualization critique, user feedback, and iterative design to improve clarity and analytical effectiveness.
+**Project Scope**
 
-[View Project →](critique-by-design)
+- Financial data interpretation and visualization critique
+- Evaluation of visual communication and information design
+- User research and feedback-driven iteration
+- Redesign of financial data visualizations
 
----
-
-### 02. Working Hours & Global Happiness
-
-**Python | Data Analytics | Economic Research | Data Storytelling**
-
-A global research project investigating the relationship between working hours, work-life balance, and human well-being.
-
-Using OECD data and the World Happiness Report, the project explores cross-country patterns, regional differences, and statistical relationships through data analysis and visual storytelling.
-
-#### Research & Development
-
-- [Research Design and Data Sources](final-project-part-one)
-- [Storyboard and User Research](final-project-part-two)
-- [Final Analysis and Design Process](final-project-part-three)
-- [Interactive Research Website](https://carnegiemellon.shorthandstories.com/tech-company-annual-report-copy/index.html)
+[Explore Project →](critique-by-design)
 
 ---
 
-## Technical & Analytical Skills
+### 02 — Working Hours & Global Well-being
 
-- Python and Data Analytics
-- Financial and Economic Research
-- Exploratory Data Analysis
-- Statistical Analysis
-- Data Visualization
-- User Research and Design
-- Digital Storytelling
-- GitHub and Markdown
+*Python · Quantitative Research · Economic Analysis*
+
+A cross-country research project investigating the relationship between working hours and human well-being.
+
+Drawing on OECD data and the World Happiness Report, the project examines global patterns, regional differences, and statistical relationships between working hours and happiness.
+
+**Methodology**
+
+- Data cleaning, integration, and preprocessing
+- Exploratory data analysis
+- Correlation and cross-country analysis
+- Regional comparisons and outlier analysis
+- Data visualization and digital storytelling
+
+**Project Documentation**
+
+- [Research Design & Data Sources](final-project-part-one)
+- [Visual Strategy & User Research](final-project-part-two)
+- [Final Analysis & Design Iteration](final-project-part-three)
+- [Interactive Research Publication](https://carnegiemellon.shorthandstories.com/tech-company-annual-report-copy/index.html)
+
+---
+
+## Core Competencies
+
+| Domain | Focus Areas |
+| :--- | :--- |
+| Financial & Economic Analysis | Financial Markets, Economic Research, Quantitative Analysis |
+| Data Science & Analytics | Python, Data Processing, Exploratory Data Analysis, Statistical Analysis |
+| Research & Visualization | Data Visualization, User Research, Digital Storytelling |
+| Technology & Information Systems | Information Systems, GitHub, Digital Technologies |
 
 ---
 
@@ -67,21 +79,27 @@ Using OECD data and the World Happiness Report, the project explores cross-count
 
 ### Carnegie Mellon University
 
-Master of Information Systems Management (MISM)
+**Master of Information Systems Management (MISM)**
 
 Heinz College of Information Systems and Public Policy
 
-2025–2026
+2025 – 2026
 
 ### The Ohio State University
 
-Bachelor of Arts in Economics
+**Bachelor of Arts in Economics**
 
 Minor in History
 
-Magna Cum Laude
+**Magna Cum Laude**
 
-2022–2025
+2022 – 2025
+
+---
+
+## Professional Interests
+
+Financial Markets · Business Analytics · Data Science · Information Systems · Technology Strategy · Data-Driven Decision-Making
 
 ---
 
@@ -91,4 +109,4 @@ Magna Cum Laude
 
 ---
 
-© 2026 Huining Diao. All rights reserved.
+© 2026 Huining Diao
