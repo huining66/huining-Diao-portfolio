@@ -15,7 +15,7 @@ The three research pipelines below were **successfully executed on GitHub Action
 | Research case | Real execution results | Code & reproducible outputs |
 |---|---|---|
 | [Explainable customer churn](https://huining66.github.io/huining-Diao-portfolio/research-churn.html) | XGBoost ROC AUC **0.8454**, AP **0.6609**; logistic baseline ROC AUC **0.8388**, AP **0.6292** | [Python](analysis/churn_xgb_shap.py) · [Metrics CSV](data/research/model_metrics.csv) |
-| [US unemployment vs S&P 500](https://huining66.github.io/huining-Diao-portfolio/research-macro.html) | **117 matched monthly observations**; full-sample Pearson **+0.1682**; outlier sensitivity reported separately | [Python](analysis/macro_market.py) · [Summary JSON](data/research/macro_summary.json) |
+| [US unemployment vs S&P 500](https://huining66.github.io/huining-Diao-portfolio/research-macro.html) | **117 matched monthly observations**; full-sample Pearson **+0.1682**, versus **−0.1999** after excluding April and June 2020 | [Python](analysis/macro_market.py) · [Summary JSON](data/research/macro_summary.json) |
 | [Financial data engineering](https://huining66.github.io/huining-Diao-portfolio/research-pipeline.html) | **506 historical equity observations**, **24.27%** annualized volatility, **−30.44%** maximum drawdown | [Python](analysis/financial_pipeline.py) · [Monthly dataset](data/research/market_monthly.csv) |
 
 ![SHAP model explanations](assets/research/shap_summary.png)
