@@ -1,0 +1,35 @@
+name: Extended wellbeing research
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/wellbeing_extended.py'
+      - '.github/workflows/wellbeing.yml'
+permissions:
+  contents: write
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas statsmodels reportlab
+      - run: python analysis/wellbeing_extended.py
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+          pdfinfo data/wellbeing/report.pdf
+          pdftoppm -scale-to 1200 -png data/wellbeing/report.pdf /tmp/report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wellbeing-report-preview
+          path: /tmp/report-*.png
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/wellbeing
+          git commit -m "Publish validated wellbeing research outputs" || exit 0
+          git pull --rebase origin main
+          git push
