@@ -1,107 +1,240 @@
-| [home page](README.md) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
 
-# Title
-Gold Price Visualization Redesign
+[← Back to Portfolio](./) | [Global Well-being Research](final-project-part-three)
 
-## Step one: the visualization
+# Gold Market Analytics & Visualization
 
-**Original Visualization:** Live Gold Spot Price  
-**Source:** BullionVault  
-**Link:** (https://www.bullionvault.com/gold-price-chart.do)
+### Redesigning Financial Data for Clarity and Decision Support
 
-<img width="558" height="630" alt="original" src="https://github.com/user-attachments/assets/179c605c-72fc-46fa-90a2-783bb965cd89" />
+**Financial Markets · Visual Analytics · Information Design · User Research**
 
-I chose this visualization because it presents real-time financial data that should be quick to understand, but the current design makes it harder than expected to interpret.
+Carnegie Mellon University | 2026
 
-The chart includes detailed information, but it lacks clear hierarchy and focus. It is difficult to quickly identify trends or understand what the most important takeaway is. Because of this, I thought it would be a good candidate for redesign.
+---
 
-The visualization is publicly accessible and represents real-world financial data.
+## Executive Summary
 
-## Step two: the critique
+Financial data is most valuable when users can interpret it accurately and efficiently. However, information density and unclear visual hierarchy can make even accessible market data difficult to understand.
 
-Based on the critique framework, I evaluated the visualization from multiple perspectives, including clarity, audience, and effectiveness.
+This project examines the presentation of live gold spot prices through a structured visualization critique, exploratory user research, and iterative design.
 
-### Overall observations
-The visualization shows gold price changes over time and provides detailed real-time data. What stood out to me is that the chart contains many small fluctuations, which makes it feel noisy and difficult to interpret at a glance.
+The objective is to improve the readability and interpretability of financial information while maintaining the integrity of the underlying data.
 
-One thing that works well is that the data itself is accurate and updated in real time, which is useful for users who want precise information. However, the chart lacks a clear visual hierarchy. It does not guide the viewer’s attention to the most important takeaway, and the layout feels cluttered. As a result, it is difficult to quickly understand the overall trend without carefully examining the chart.
+---
 
-### Audience
-The primary audience for this tool is likely investors or people who are actively tracking gold prices. These users are interested in timely and accurate financial information.
+## Project Overview
 
-However, the visualization is not fully effective for this audience. While it provides detailed data, it does not support quick interpretation. Investors often need to make fast decisions, but the current design requires too much cognitive effort to understand the main trend. A clearer and more focused design would better meet their needs.
+| Category | Details |
+| :--- | :--- |
+| Project Type | Financial Data Visualization Case Study |
+| Institution | Carnegie Mellon University |
+| Domain | Financial Markets and Information Design |
+| Data Source | BullionVault |
+| Research Method | Visualization Critique and Qualitative User Interviews |
+| Design Approach | User-Centered, Iterative Design |
+| Research Participants | Two Peer Participants |
+| Deliverable | Redesigned Financial Visualization |
 
-### Redesign direction
-Based on this critique, I will focus on simplifying the visualization and making the overall trend more immediately clear. I want to reduce visual noise by removing unnecessary details and emphasizing a single, clean line that highlights the main pattern.
+---
 
-I will also improve the visual hierarchy so that users can quickly identify key information. For example, I may highlight important points such as peaks or recent changes and separate supporting details from the main chart.
+## 01 — Problem Definition
 
-Overall, my goal is to create a visualization that allows users to understand the data quickly with less cognitive effort, while still preserving the accuracy of the original information.
+Gold price movements provide valuable information for investors and individuals monitoring financial markets.
 
-## Step three: Sketch a solution
+Although existing financial charts offer detailed market information, their effectiveness depends on how clearly they communicate price movements, market direction, and relevant metrics.
 
-<img width="254" height="333" alt="Screenshot 2026-04-01 at 21 44 21" src="https://github.com/user-attachments/assets/28687938-b5c3-4dd5-94ca-d531b101f2f5" />
+### Original Visualization
 
-In my sketches, I focused on simplifying the layout and improving visual hierarchy. I explored designs that reduce unnecessary detail and emphasize the main trend of gold prices over time.
+**Source:** BullionVault — Live Gold Spot Price
 
-One idea was to smooth the price line to highlight the overall trend instead of short-term fluctuations. I also considered separating the key metrics (current price, weekly change) and placing them prominently at the top of the visualization.
+[View Original Financial Chart](https://www.bullionvault.com/gold-price-chart.do)
 
-Another design choice was to use clearer color contrast to distinguish between different elements. For example, using one strong color for the main trend and lighter tones for secondary information.
+<img width="558" alt="Original BullionVault gold spot price visualization" src="https://github.com/user-attachments/assets/179c605c-72fc-46fa-90a2-783bb965cd89" />
 
-I also experimented with adding annotations to highlight important moments, such as sharp increases or decreases in price. This helps guide the viewer's attention and makes the chart more storytelling-oriented.
+*Figure 1. Original gold price visualization from BullionVault.*
 
-## Step four: Test the solution
+The original visualization provides detailed, real-time financial information. However, its information density and limited visual hierarchy create challenges for users attempting to identify the overall price trend quickly.
 
-I shared my redesigned sketch with two peers and asked them a few questions about their understanding.
+The central design question is:
 
-Both participants were able to quickly identify the main trend of the gold price in the redesigned version. They mentioned that the simplified line made it easier to understand whether the price was increasing or decreasing overall.
+> How can financial visualizations communicate essential market information more effectively without compromising the accuracy of the underlying data?
 
-One participant noted that separating the key statistics at the top made the chart more intuitive, since they could immediately see the current price before looking at the trend.
+---
 
-However, one piece of feedback was that adding too many annotations could become distracting. Based on this, I decided to keep only the most important annotations in the final design.
+## 02 — Visualization Assessment
 
-Overall, the feedback suggested that simplifying the design and improving hierarchy made the visualization more effective and easier to interpret.
+The original chart was evaluated across four dimensions: clarity, visual hierarchy, audience relevance, and interpretability.
 
-Results:
+| Evaluation Dimension | Key Observation |
+| :--- | :--- |
+| Visual Clarity | Frequent short-term fluctuations make the broader trend difficult to identify. |
+| Information Hierarchy | Key financial metrics are not sufficiently differentiated from supporting information. |
+| Audience Relevance | Detailed information is available, but rapid interpretation requires additional effort. |
+| Cognitive Load | Users must process multiple visual elements before identifying the primary message. |
 
-| Question | Interview 1 | Interview 2 |
-|----------|------------|------------|
-| What do you think this is? | A chart showing gold price over time | A price trend of gold in recent days |
-| What is it telling you? | The price fluctuates but overall slightly increases | There is volatility but the main trend is unclear |
-| Anything confusing? | Too many small fluctuations, hard to see big picture | Layout feels cluttered and key info is not obvious |
-| Intended audience? | Investors or people tracking gold prices | People interested in financial markets |
-| What would you change? | Simplify the line and highlight key points | Make the trend clearer and separate key numbers |
+### Target Audience
 
-Synthesis:
+The intended audience includes:
 
-Across both interviews, a consistent pattern emerged: while users understood that the chart represents gold prices, they struggled to quickly identify the main trend.
+- Investors monitoring gold prices
+- Individuals interested in financial markets
+- Users seeking an accessible overview of gold price movements
 
-Both participants mentioned that the visualization contains too much detail, especially the short-term fluctuations, which makes it difficult to see the bigger picture. They also pointed out that important information, such as the current price and overall trend, is not emphasized clearly.
+These users may have different levels of financial expertise but share a need for clear, timely, and interpretable information.
 
-Another common theme was that the layout feels cluttered and lacks hierarchy. Users had to spend extra time interpreting the chart instead of immediately understanding it.
+### Design Objectives
 
-Based on this feedback, I decided to focus my redesign on three main improvements. First, simplifying the line to highlight the overall trend rather than small fluctuations. Second, improving visual hierarchy by separating key metrics from the chart. Third, reducing clutter and using clearer visual cues to guide attention.
+The redesign focuses on three priorities:
 
-These changes aim to make the visualization more intuitive and allow users to quickly grasp the most important insights.
+1. Improve the visibility of the overall price trend.
+2. Establish a clearer hierarchy between primary metrics and supporting information.
+3. Reduce unnecessary visual complexity while preserving meaningful financial details.
 
-## Step five: build the solution
+---
 
-<img width="246" height="327" alt="Screenshot 2026-04-01 at 21 44 41" src="https://github.com/user-attachments/assets/6b4fc308-5344-4ff9-b219-6b4bc6e96a5a" />
+## 03 — Design Strategy & Prototyping
 
-The final redesigned visualization focuses on simplifying the presentation and making the overall trend of gold prices easier to understand. Instead of showing excessive small fluctuations, the design emphasizes a cleaner and more readable line that highlights the main pattern over time.
+The initial design explored alternative approaches to presenting financial information through a more structured visual hierarchy.
 
-I chose this design because a simplified line chart is the most effective way to communicate overall trends over time. The goal is to allow users to quickly grasp the direction of price changes without being distracted by unnecessary details.
+<img width="400" alt="Initial gold price visualization redesign prototype" src="https://github.com/user-attachments/assets/28687938-b5c3-4dd5-94ca-d531b101f2f5" />
 
-This redesigned visualization shows the overall trend of gold prices more clearly, allowing users to immediately understand whether prices are generally increasing or decreasing.
+*Figure 2. Initial redesign concept and visual exploration.*
 
-Compared to the original, this design reduces visual clutter and improves readability. It also establishes a clearer visual hierarchy, making it easier for users to interpret the data at a glance and with less cognitive effort.
+### Design Principles
 
-Overall, the redesign aims to balance clarity and accuracy by keeping the essential information while removing distractions.
+**Information Prioritization**
+
+Position essential financial metrics, such as the current price and weekly change, prominently within the layout.
+
+**Visual Hierarchy**
+
+Use contrast, spacing, and typography to distinguish primary information from secondary details.
+
+**Trend Communication**
+
+Explore a cleaner presentation of price movements to help users identify the overall market direction.
+
+**Selective Annotation**
+
+Highlight meaningful price movements without introducing excessive visual distractions.
+
+**Data Integrity**
+
+Balance visual simplification with the need to preserve meaningful price fluctuations. Any smoothing or aggregation should be clearly communicated to avoid misrepresenting market volatility.
+
+---
+
+## 04 — User Research & Validation
+
+Exploratory qualitative research was conducted with two peer participants to understand how users interpret the visualization and identify opportunities for improvement.
+
+The interviews focused on comprehension, perceived clarity, audience relevance, and potential design improvements.
+
+### Interview Findings
+
+| Research Question | Participant 1 | Participant 2 |
+| :--- | :--- | :--- |
+| What does the chart represent? | Gold prices over time | Recent gold price trends |
+| What is the main takeaway? | Prices fluctuate but generally increase slightly | Volatility is visible, but the overall trend is unclear |
+| What creates confusion? | Excessive short-term fluctuations | Cluttered layout and unclear key information |
+| Who is the intended audience? | Investors and gold price observers | Individuals interested in financial markets |
+| What could be improved? | Simplify the line and highlight key points | Clarify the trend and separate key metrics |
+
+### Key Research Insights
+
+**Insight 1 — Trend Visibility**
+
+Participants understood the subject of the visualization but identified challenges in interpreting the overall price direction.
+
+**Insight 2 — Information Hierarchy**
+
+Separating key financial metrics from the main chart was identified as an opportunity to improve accessibility.
+
+**Insight 3 — Visual Complexity**
+
+Excessive detail and annotations can compete with the primary analytical message.
+
+### Feedback-Driven Iteration
+
+Feedback on the redesigned concept suggested that a cleaner trend line and more prominent financial metrics could improve initial comprehension.
+
+One participant also noted that excessive annotations could become distracting. This feedback informed the decision to prioritize only the most relevant annotations.
+
+Given the small participant sample, these findings should be interpreted as exploratory qualitative insights rather than statistically generalizable results.
+
+---
+
+## 05 — Final Design
+
+<img width="400" alt="Final redesigned gold price visualization" src="https://github.com/user-attachments/assets/6b4fc308-5344-4ff9-b219-6b4bc6e96a5a" />
+
+*Figure 3. Final financial visualization redesign.*
+
+The final design emphasizes a more focused presentation of gold price movements, supported by clearer information hierarchy and reduced visual complexity.
+
+### Design Comparison
+
+| Design Dimension | Original Visualization | Redesigned Visualization |
+| :--- | :--- | :--- |
+| Trend Presentation | Detailed short-term fluctuations | Greater emphasis on the overall trend |
+| Key Metrics | Integrated within a dense layout | More prominent information placement |
+| Visual Hierarchy | Limited differentiation | Clearer separation of primary and secondary information |
+| Annotation Strategy | Less focused visual guidance | Selective emphasis on meaningful information |
+| User Experience | Requires more deliberate interpretation | Designed to support faster initial comprehension |
+
+The redesigned visualization prioritizes accessibility and analytical clarity while recognizing the importance of retaining meaningful financial information.
+
+---
+
+## 06 — Outcomes & Professional Takeaways
+
+This project demonstrates how financial information can be made more accessible through thoughtful visualization design and user-centered evaluation.
+
+The exploratory feedback suggests that clearer visual hierarchy and a more focused presentation may support users in identifying essential price information.
+
+### Key Takeaways
+
+- Financial data accessibility depends on both data quality and presentation.
+- Visual hierarchy plays an important role in communicating analytical insights.
+- Qualitative user research can reveal interpretation challenges that may not be apparent during the initial design process.
+- Financial visualization requires a balance between simplicity, accuracy, and transparency.
+- Iterative design provides a structured approach to improving information communication.
+
+### Limitations & Future Directions
+
+The evaluation was based on a small qualitative sample of two participants. Further research could involve a broader range of users, including individuals with different levels of financial expertise.
+
+Future evaluation could measure interpretation accuracy, task completion time, and user confidence when comparing alternative chart designs.
+
+---
+
+## Applied Competencies
+
+- Financial Data Interpretation
+- Data Visualization
+- Visual Analytics
+- Information Design
+- User Research
+- Qualitative Analysis
+- Prototyping
+- Iterative Design
+- Analytical Communication
+
+---
 
 ## References
-BullionVault. Live Gold Price Chart. https://www.bullionvault.com/gold-price-chart.do
 
-## AI acknowledgements
-**
-I used ChatGPT to help me organize my ideas and improve clarity in writing. All design work and decisions are my own.
-**
+BullionVault. *Live Gold Price Chart.*
+
+[https://www.bullionvault.com/gold-price-chart.do](https://www.bullionvault.com/gold-price-chart.do)
+
+---
+
+## AI Disclosure
+
+ChatGPT was used to assist with organizing ideas and improving written communication. All original design work and design decisions are my own.
+
+---
+
+[← Return to Portfolio](./)
+
+© 2026 Huining Diao
