@@ -53,7 +53,7 @@ The [GitHub Actions workflow](.github/workflows/research.yml) installs dependenc
 - [Churn prediction — Python](analysis/churn_model.py)
 - [Economic research — matched dataset](matched-data.csv)
 
-Projects use historical or illustrative public data. See each case study for sources, methodology, limitations and production notes. Research and technical demonstrations were developed with AI assistance. The three new advanced Python research pipelines were executed in GitHub Actions; older demonstration code and equivalent SQL scripts have not all been independently run. Results are descriptive and dataset-specific.
+Projects use historical or illustrative public data. See each case study for sources, methodology, limitations and production notes. AI-assisted tools supported source discovery, data preparation and technical implementation. Documented methods and reproducible code accompany research outputs where applicable. The three new advanced Python research pipelines were executed in GitHub Actions; older demonstration code and equivalent SQL scripts have not all been independently run. Results are descriptive and dataset-specific.
 
 ## Professional experience
 
