@@ -60,6 +60,13 @@ jobs:
               if(await milestone.getAttribute('open')===null)failures.push('career milestone expansion failed');
               await milestone.locator('summary').click();
               if(await milestone.getAttribute('open')!==null)failures.push('career milestone collapse failed');
+              await page.locator('#language-toggle').click();
+              if(await page.locator('#featured h2').textContent()!=='精选研究')failures.push('Chinese homepage translation failed');
+              await page.reload();
+              if(await page.locator('#featured h2').textContent()!=='精选研究')failures.push('language preference persistence failed');
+              if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))failures.push('Chinese layout overflow');
+              await page.locator('#language-toggle').click();
+              if(await page.locator('#featured h2').textContent()!=='Featured research')failures.push('English restoration failed');
               await page.locator('#studio-search').click();
               await page.locator('#studio-query').fill('SHAP');
               if(await page.locator('#studio-results a').count()!==1)failures.push('global search failed');
@@ -147,7 +154,9 @@ jobs:
               await page.waitForSelector('#world-map path[tabindex="0"]');
               await page.locator('#world-map path[tabindex="0"]').first().focus();
               if(!(await page.locator('#map-detail').textContent()).includes('hours'))failures.push('map inspection failed');
+              await page.locator('#world-map path').first().evaluate(e=>e.dataset.reuseCheck='yes');
               await page.locator('#map-metric').selectOption('hours');
+              if(await page.locator('#world-map path').first().getAttribute('data-reuse-check')!=='yes')failures.push('map geometry unnecessarily rebuilt');
               await page.waitForSelector('#extended-results table');
               if(await page.locator('#extended-results tr').count()!==4)failures.push('model table incomplete');
               for(const path of ['report.pdf','matched-gdp.csv','models.json']){
