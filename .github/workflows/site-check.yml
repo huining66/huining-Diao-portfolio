@@ -129,6 +129,9 @@ jobs:
               await check('dcf',String.fromCharCode(36));
               await page.locator('#discount').fill('2');
               await check('dcf','discount rate must exceed growth');
+              if(await page.locator('#dcf-chart rect').count())failures.push('DCF chart shows results for invalid rates');
+              await page.locator('#discount').fill('10');
+              if(await page.locator('#dcf-chart rect').count()!==5)failures.push('DCF chart did not recover after valid input');
               await check('ab','3 pp | z = 2.1');
               await page.locator('#control').fill('1001');
               await check('ab','Enter valid counts');
