@@ -36,6 +36,8 @@ The objective is to identify meaningful associations, explore cross-country diff
 
 ---
 
+**Scope note:** This page documents the original research framework, including the 2015 happiness dataset. A separate post-project 2023 analysis is documented in [Part II](final-project-part-two) and [Part III](final-project-part-three).
+
 ## 01 — Research Background
 
 Working hours represent an important dimension of labor market conditions, economic activity, and quality of life.
