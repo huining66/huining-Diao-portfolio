@@ -5,6 +5,8 @@ on:
     paths:
       - '**.html'
       - 'assets/**'
+      - 'data/wellbeing/**'
+      - 'analysis/wellbeing.py'
       - '.github/workflows/site-check.yml'
 permissions:
   contents: read
@@ -93,9 +95,24 @@ jobs:
                 const response=await page.request.get('http://localhost:8765/data/wellbeing/'+path);
                 if(!response.ok())failures.push('missing extended output '+path);
               }
+              const coverage=await page.locator('#world-map path[tabindex="0"]').count();
+              if(coverage<100)failures.push('map coverage below 100: '+coverage);
+              await page.locator('#region').selectOption('Oceania');
+              if(await page.locator('#scatter line[stroke="#b45309"]').count())failures.push('small sample trend displayed');
+              if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))failures.push('async layout overflow '+width);
+              const pdf=await page.request.get('http://localhost:8765/data/wellbeing/report.pdf');
+              if((await pdf.body()).subarray(0,5).toString()!=='%PDF-')failures.push('invalid PDF signature');
+              const models=await (await page.request.get('http://localhost:8765/data/wellbeing/models.json')).json();
+              if(models.models.full_unadjusted.n!==120||models.models.matched_adjusted.n!==118)failures.push('unexpected model sample sizes');
+              await page.screenshot({path:'wellbeing-'+width+'.png',fullPage:true});
               await page.close();
             }
             await browser.close();
             if(failures.length){console.error(failures.join('\n'));process.exitCode=1}
           })().catch(e=>{console.error(e);process.exitCode=1});
           JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wellbeing-browser-screenshots
+          path: wellbeing-*.png
