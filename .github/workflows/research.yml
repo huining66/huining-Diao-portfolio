@@ -1,0 +1,35 @@
+name: Research validation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/**'
+      - '.github/workflows/research.yml'
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        script: [financial_pipeline, macro_market, churn_xgb_shap]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r analysis/requirements.txt
+      - name: Execute research
+        shell: bash
+        run: |
+          set -o pipefail
+          MPLBACKEND=Agg python analysis/${{ matrix.script }}.py 2>&1 | tee results.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ matrix.script }}-results
+          path: |
+            results.log
+            output/
+            *.png
