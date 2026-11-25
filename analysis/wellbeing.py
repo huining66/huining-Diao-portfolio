@@ -28,3 +28,11 @@ assert abs(r+0.4762407074)<1e-8
 assert abs(b+0.1718735583)<1e-8
 assert abs(rho+0.5114782675)<1e-8
 assert abs(within+0.0678901297)<1e-8
+
+# HC3 sandwich standard error for the simple regression slope.
+z=[u/100-st.mean(x)/100 for u in x]
+ss=sum(u*u for u in z)
+e=[v-st.mean(y)-b*u for u,v in zip(z,y)]
+lev=[1/len(z)+u*u/ss for u in z]
+hc3=math.sqrt(sum(u*u*v*v/(1-h)**2 for u,v,h in zip(z,e,lev)))/ss
+print("HC3 SE",hc3,"approximate 95% CI",(b-1.98*hc3,b+1.98*hc3),"max leverage",max(lev))
