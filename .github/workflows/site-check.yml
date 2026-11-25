@@ -61,7 +61,9 @@ jobs:
               const lightPalette=await palette();
               const lightBackground=await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor);
               await page.locator('#studio-theme').click();
-              if(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor)===lightBackground)failures.push('theme background did not change');
+              await page.waitForTimeout(350);
+              const darkBackground=await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor);
+              if(darkBackground===lightBackground||darkBackground!=='rgb(17, 29, 44)')failures.push('theme background incorrect '+width+': '+lightBackground+' -> '+darkBackground);
               if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme toggle failed');
               await page.waitForTimeout(350);
               const darkPalette=await palette();
@@ -69,7 +71,12 @@ jobs:
               await page.screenshot({path:'theme-dark-'+width+'.png',fullPage:true});
               await page.reload();
               if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme persistence failed');
+              await page.goto('http://localhost:8765/research-lab.html');
+              if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('cross-page theme persistence failed');
+              await page.goto('http://localhost:8765/');
               await page.locator('#studio-theme').click();
+              await page.waitForTimeout(350);
+              if(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor)!==lightBackground)failures.push('light background restoration failed');
               await page.locator('[data-metric="ml"]').click();
               if(await page.locator('#terminal-value').textContent()!=='0.8454')failures.push('terminal ML metric incorrect');
               await page.locator('[data-metric="econ"]').click();
