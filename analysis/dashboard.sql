@@ -1,0 +1,1 @@
+SELECT Contract, InternetService, COUNT(*) AS customers, SUM(CASE WHEN Churn='Yes' THEN 1 ELSE 0 END) AS churned, AVG(CAST(MonthlyCharges AS REAL)) AS mean_charge FROM customers GROUP BY Contract, InternetService;
