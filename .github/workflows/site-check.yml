@@ -51,6 +51,15 @@ jobs:
                 failures.push(...issues.map(e=>width+' '+file+' '+e));
                 console.log(width,file,issues.length?'FAIL':'PASS');
               }
+              await page.goto('http://localhost:8765/');
+              await page.locator('[data-metric="ml"]').click();
+              if(await page.locator('#terminal-value').textContent()!=='0.8454')failures.push('terminal ML metric incorrect');
+              await page.locator('[data-metric="econ"]').click();
+              if(await page.locator('#terminal-value').textContent()!=='72.49%')failures.push('terminal economics metric incorrect');
+              await page.locator('[data-filter="finance"]').click();
+              if(await page.locator('.project-grid>.card:visible').count()!==2)failures.push('finance filter failed');
+              await page.locator('[data-filter="all"]').click();
+              if(await page.locator('.project-grid>.card:visible').count()!==5)failures.push('reset filter failed');
               await page.goto('http://localhost:8765/research-lab.html');
               const before=await page.locator('#portfolio').textContent();
               await page.locator('#weight').fill('80');
