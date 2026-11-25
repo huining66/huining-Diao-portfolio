@@ -1,156 +1,49 @@
-[← Back to Portfolio](./) | [Part I — Research Design](final-project-part-one) | [Part II — Visualization & User Research](final-project-part-two)
+[← Portfolio](./) | [Gold Market Visualization](critique-by-design)
 
 # Working Hours & Global Well-being
 
-### Part III — Final Analysis & Design Iteration
+**Economic research · Python · Exploratory data analysis · Data visualization**
 
-**Economic Analysis · Visual Communication · Research Publication**
+## Research question
 
-Huining Diao | Carnegie Mellon University | 2026
+How are annual working hours associated with subjective well-being across countries?
 
-## Final Research Publication
+| Sample | Reference year | Pearson correlation |
+| --- | --- | --- |
+| 120 countries | 2023 | −0.476 |
 
-My final interactive data story can be viewed here:
+## Key finding
 
-[View Final Story](https://carnegiemellon.shorthandstories.com/tech-company-annual-report-copy/index.html)
-
-This final project explores the relationship between average annual working hours and happiness scores across countries. A common belief is that working longer hours leads to greater productivity, success, or a better quality of life. However, international data suggests that the relationship is not always straightforward.
-
-The purpose of this project was to create a data story that helps readers examine whether countries with longer working hours are actually happier. By combining work-hour data with happiness rankings, I wanted to present a broader perspective on work-life balance and well-being.
-
-The final story uses a scrolling narrative format to guide readers through the topic step by step. It begins with the central question, introduces the data sources, presents visual comparisons, highlights notable patterns, and ends with a final takeaway. My goal was to make the information clear, visually engaging, and meaningful for a general audience.
-
----
-
-## Design Iteration & Research Findings
-
-Since completing Part II, I made several important revisions based on feedback, self-review, and lessons learned during the design process.
-
-## Reduced Text and Improved Readability
-
-One major issue in my earlier draft was that some sections contained too much text. Readers could understand the topic, but the pacing felt slower than I wanted. In the final version, I shortened explanations, removed repetitive wording, and focused on concise section introductions. This allowed the visuals to communicate more of the message.
-
-## Stronger Story Flow and Transitions
-
-I improved the narrative flow between sections so the story feels more connected. Instead of treating each chart as a separate item, I created smoother transitions from the opening question, to the data context, to the comparisons, and finally to the conclusion. This helped the project feel more like one complete story.
-
-## Improved Chart Presentation
-
-I refined the visual layout of the charts by improving spacing, consistency, labels, and hierarchy. I also highlighted notable countries and clearer patterns so readers could more quickly identify important findings.
-
-## Clearer Final Takeaway
-
-In earlier drafts, the conclusion mainly repeated the chart results. In the final version, I expanded the takeaway to explain why the findings matter. I emphasized that quality of life may depend more on balance, support systems, and well-being than simply working more hours.
-
-## Applying Feedback
-
-Feedback from classmates during Part II suggested that shorter text, cleaner visuals, and stronger real-world takeaways would improve the project. These comments directly influenced the final version.
-
----
-
-## Audience & Communication Strategy
-
-The intended audience for this project is college students, graduate students, young professionals, and general readers interested in careers, productivity, lifestyle choices, and quality of life.
-
-I selected this audience because many people in these groups are actively thinking about future careers, workplace expectations, stress, and how to maintain balance between work and personal life. Because the topic connects to everyday concerns, I believed it would be meaningful and relatable to them.
-
-## How I Designed for This Audience
-
-To make the project effective for a broad audience, I made several specific adjustments:
-
-- Used clear and simple language instead of technical statistical vocabulary  
-- Focused on key insights rather than complex methodology  
-- Used clean visuals that can be understood quickly  
-- Organized the story in a scrolling format that feels natural and easy to follow  
-- Included a practical final takeaway that connects data to real life  
-
-## Insights from Feedback
-
-Based on peer feedback, I learned that readers responded best when the charts were easy to interpret and when the message felt relevant to their own lives. Because of this, I emphasized clarity, accessibility, and practical meaning throughout the final version.
-
----
-
-## Final Design Decisions
-
-Several design choices were especially important in shaping the final project.
-
-## Storytelling Format
-
-I selected a scrolling story format using Shorthand because it allows the audience to move through the content step by step. This format works well for narrative communication because it introduces ideas gradually rather than overwhelming the reader with all charts at once.
-
-## Visual Simplicity
-
-I used a clean visual style with limited colors, readable text, and minimal distractions. My goal was to keep the audience focused on the message and the data rather than decorative elements.
-
-## Use of Comparison
-
-Because the project compares countries, I selected visuals that support comparison clearly. The scatter plot was the most important chart because it shows the relationship between working hours and happiness in one view. Additional charts helped provide context and reinforce patterns.
-
-## Hierarchy and Emphasis
-
-I used titles, spacing, and placement to guide attention through the page. Important findings were positioned clearly so readers would know where to focus first.
-
-## Design Lessons Learned
-
-One of the biggest lessons I learned is that good charts alone are not enough. Effective data storytelling also requires pacing, structure, clarity, and an understanding of what the audience needs to know at each stage.
-
----
-
-## Portfolio Extension — 2023 Cross-country Analysis
-
-A separate post-project analysis uses 120 matched country observations from 2023. The Pearson correlation between annual working hours and life satisfaction is −0.476, indicating a negative descriptive association.
+Countries with longer average working hours tend to report lower life satisfaction in this matched sample. The association is descriptive and does not establish causation.
 
 ![Working hours and life satisfaction](06-working-hours-scatter.png)
 
-This analysis does not establish causation. Income, institutions, social support, employment composition and measurement differences may contribute to the observed pattern. Country averages cannot establish individual-level effects.
+## Regional patterns
 
-[Explore all three updated charts and methods](final-project-part-two) · [Download matched data](matched-data.csv)
+![Regional comparison](07-regional-comparison.png)
 
-Sources: [Our World in Data — Life satisfaction](https://ourworldindata.org/grapher/happiness-cantril-ladder) and [Annual working hours](https://ourworldindata.org/grapher/annual-working-hours-per-worker).
+Regional summaries give each available country equal weight and should not be interpreted as population-weighted estimates.
 
-The extension is separate from the original Shorthand publication and was prepared with ChatGPT assistance.
+## Country-level deviations
 
-## References
+![Country-level outliers](08-country-outliers.png)
 
-OECD. Hours Worked Dataset.  
-https://data.oecd.org/emp/hours-worked.htm
+Countries that depart from the fitted relationship provide opportunities to investigate additional economic and institutional factors.
 
-World Happiness Report.  
-https://worldhappiness.report/
+## Data and methodology
 
-Kaggle. World Happiness Dataset.  
-https://www.kaggle.com/datasets/unsdsn/world-happiness
+- Match country-level observations for 2023 using country identifiers.
+- Compare annual hours worked per worker with life satisfaction measured on the 0–10 Cantril ladder.
+- Calculate Pearson correlation, descriptive regional summaries and deviations from a fitted linear relationship.
 
-GitHub Portfolio Dataset Copy.  
-https://github.com/huining66/huining-Diao-portfolio/
+[Download matched dataset (CSV)](matched-data.csv)
 
-Additional detailed references and source notes are also included in the final Shorthand story.
+Sources: [Our World in Data — Life satisfaction](https://ourworldindata.org/grapher/happiness-cantril-ladder) · [Annual working hours](https://ourworldindata.org/grapher/annual-working-hours-per-worker).
 
----
+## Limitations and implications
 
-## AI Acknowledgements
+National averages do not establish individual-level effects. Income, employment composition, social support and measurement differences may confound the association. The results support further investigation rather than a policy prescription.
 
-I used Microsoft Copilot during this project for brainstorming topic ideas, improving grammar, organizing written sections, and refining wording for clarity. Copilot was also used to help structure presentation materials, including slide organization and draft PowerPoint content for the in-class presentation.
+This portfolio analysis extends an academic research project. ChatGPT assisted with data preparation, visualization and presentation.
 
-AI tools were mainly used during planning and editing stages rather than for final decision-making. All final analysis, chart selection, design choices, written content, interpretations, and submitted materials were reviewed, revised, and finalized by me.
-
----
-
-## Reflection & Future Research
-
-Overall, I am proud of how this project developed from an early concept into a complete final data story.
-
-At the beginning of the semester, the topic was broad and I mainly focused on finding interesting data. Through Parts I, II, and III, I learned how to narrow the focus, define an audience, build a narrative structure, and improve visual communication through revision.
-
-The most rewarding part of the project was transforming raw numbers into a story that feels useful and relevant to everyday life. I also gained a better understanding of how design decisions can strongly affect whether people understand a message.
-
-If I had more time, I would explore additional variables such as income, vacation time, healthcare access, and social support. I would also add more interactive features that allow readers to compare countries directly.
-
-This project helped me better understand that successful data storytelling combines analysis, design, and empathy for the audience.
-
-
----
-
-ChatGPT also assisted with portfolio restructuring and the later quantitative extension.
-
-[← Return to Portfolio](./)
+[← Return to portfolio](./)
