@@ -1,0 +1,30 @@
+{
+  "models": {
+    "full_unadjusted": {
+      "n": 120,
+      "slope": -0.17187355827375467,
+      "lo": -0.23896058417642627,
+      "hi": -0.10478653237108307,
+      "r2": 0.2268052114096557
+    },
+    "matched_unadjusted": {
+      "n": 118,
+      "slope": -0.18804784664037216,
+      "lo": -0.2491658686038209,
+      "hi": -0.12692982467692343,
+      "r2": 0.2733839003554076
+    },
+    "matched_adjusted": {
+      "n": 118,
+      "slope": -0.07554864452422813,
+      "lo": -0.12759581744655,
+      "hi": -0.023501471601906264,
+      "r2": 0.724891829266957
+    }
+  },
+  "source": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=2023&format=json&per_page=400",
+  "excluded": [
+    "Taiwan",
+    "Yemen"
+  ]
+}
