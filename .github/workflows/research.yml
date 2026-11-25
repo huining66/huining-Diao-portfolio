@@ -75,5 +75,6 @@ jobs:
           git add assets/research data/research
           if ! git diff --cached --quiet; then
             git commit -m "Publish executed and validated research artifacts"
+            git pull --rebase origin main
             git push
           fi
