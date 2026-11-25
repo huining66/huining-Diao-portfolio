@@ -68,3 +68,25 @@ button:focus-visible{outline:3px solid #b79a65;outline-offset:3px}
 html[data-theme=dark]{--paper:#111d2c;--ink:#dce6ef;--navy:#e3eaf1;--line:#35465a;color-scheme:dark}html[data-theme=dark] .card,html[data-theme=dark] .stat-band>div,html[data-theme=dark] .pipeline-steps>div,html[data-theme=dark] .figure-card{background:#1b2b3e;border-color:#35465a}html[data-theme=dark] a{color:#a9d1ef}html[data-theme=dark] header a{color:#e3eaf1}html[data-theme=dark] .button{color:#14283e}html[data-theme=dark] .meta,html[data-theme=dark] .metrics span,html[data-theme=dark] .caption,html[data-theme=dark] .stat-band>div>span:last-child,html[data-theme=dark] .pipeline-steps p,html[data-theme=dark] .figure-card figcaption{color:#b8c9d9}html[data-theme=dark] .kicker{color:#dfc391}html[data-theme=dark] .stat-value,html[data-theme=dark] .pipeline-steps strong{color:#e3eaf1}html[data-theme=dark] .tags span{background:#24374c;color:#e3eaf1!important;border-color:#506278}html[data-theme=dark] .explorer{color:#172b43;color-scheme:light}html[data-theme=dark] .explorer a{color:#254f73}html[data-theme=dark] .project-controls button[aria-pressed=true]{background:#e0c693;color:#14283e}
 
 html[data-theme=dark] header{background:#101e30;color:#fff}html[data-theme=dark] .project-controls output,html[data-theme=dark] footer{color:#b8c9d9}.studio-tools button{background:#14283e;color:#e3eaf1;border:1px solid #8293a8;border-radius:6px;padding:8px 12px}.studio-tools button[aria-pressed=true]{border-color:#dfc391;color:#dfc391}
+
+/* Executive Ivory / Midnight Intelligence */
+html[data-theme=light] header{background:linear-gradient(125deg,#f8f5ed,#e8edf3);color:#14283e}
+html[data-theme=light] header nav{border-color:#c5cbd3}
+html[data-theme=light] header nav a,html[data-theme=light] .hero .subtitle{color:#14283e}
+html[data-theme=light] .hero p{color:#43566a}
+html[data-theme=light] .eyebrow{color:#806638}
+html[data-theme=light] .hero-proof span{color:#30465c;border-color:#b9c4ce;background:#ffffff80}
+html[data-theme=light] .secondary-button{color:#14283e;border-color:#8b9bad}
+html[data-theme=light] .terminal{background:#ffffffd9;color:#14283e;border-color:#c5cbd3;box-shadow:0 18px 45px #14283e15}
+html[data-theme=light] .terminal-top,html[data-theme=light] .terminal-value,html[data-theme=light] .terminal a{color:#806638}
+html[data-theme=light] #terminal-label{color:#43566a}
+html[data-theme=light] .terminal-tabs button[aria-pressed=true]{background:#14283e;color:#fff;border-color:#14283e}
+html[data-theme=light] .studio-tools button{background:#fff9;color:#14283e;border-color:#9aaabd}
+html[data-theme=light] .lab{background:#e8eef4;color:#14283e;border:1px solid #c5cbd3}
+html[data-theme=light] .lab small,html[data-theme=light] .lab output,html[data-theme=light] .lab label{color:#14283e}
+html[data-theme=light] .lab svg text{fill:#14283e}
+html[data-theme=dark] header{background:radial-gradient(ellipse at 80% 15%,#253d55,#101e30 65%)}
+html[data-theme=dark] .terminal{background:#15283c}
+html[data-theme=dark] .lab{background:#172b40;color:#e3eaf1}
+html[data-theme=dark] .lab small,html[data-theme=dark] .lab output,html[data-theme=dark] .lab label{color:#e3eaf1}
+@media(prefers-reduced-motion:no-preference){body,header,.terminal,.card,.lab{transition:background-color .22s,color .22s,border-color .22s}}
