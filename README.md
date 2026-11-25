@@ -47,6 +47,10 @@ A cross-country research project investigating the relationship between working 
 
 Drawing on OECD data and the World Happiness Report, the project examines global patterns, regional differences, and statistical relationships between working hours and happiness.
 
+![2023 cross-country working hours and well-being analysis](06-working-hours-scatter.png)
+
+**Portfolio extension:** 120 countries · 2023 · Pearson r = −0.476 (descriptive, not causal). [Download data](matched-data.csv).
+
 **Methodology**
 
 - Data cleaning, integration, and preprocessing
