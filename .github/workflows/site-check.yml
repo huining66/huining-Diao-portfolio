@@ -52,6 +52,15 @@ jobs:
                 console.log(width,file,issues.length?'FAIL':'PASS');
               }
               await page.goto('http://localhost:8765/');
+              await page.locator('#studio-search').click();
+              await page.locator('#studio-query').fill('SHAP');
+              if(await page.locator('#studio-results a').count()!==1)failures.push('global search failed');
+              await page.keyboard.press('Escape');
+              await page.locator('#studio-theme').click();
+              if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme toggle failed');
+              await page.reload();
+              if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme persistence failed');
+              await page.locator('#studio-theme').click();
               await page.locator('[data-metric="ml"]').click();
               if(await page.locator('#terminal-value').textContent()!=='0.8454')failures.push('terminal ML metric incorrect');
               await page.locator('[data-metric="econ"]').click();
@@ -61,6 +70,9 @@ jobs:
               await page.locator('[data-filter="all"]').click();
               if(await page.locator('.project-grid>.card:visible').count()!==5)failures.push('reset filter failed');
               await page.goto('http://localhost:8765/research-lab.html');
+              const chartBefore=await page.locator('#allocation-chart').innerHTML();
+              await page.locator('#weight').fill('75');
+              if(chartBefore===await page.locator('#allocation-chart').innerHTML())failures.push('allocation chart unchanged');
               const before=await page.locator('#portfolio').textContent();
               await page.locator('#weight').fill('80');
               if(before===await page.locator('#portfolio').textContent())failures.push('allocation output unchanged');
