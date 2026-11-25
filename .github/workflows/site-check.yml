@@ -56,10 +56,17 @@ jobs:
               await page.locator('#studio-query').fill('SHAP');
               if(await page.locator('#studio-results a').count()!==1)failures.push('global search failed');
               await page.keyboard.press('Escape');
+              await page.screenshot({path:'theme-light-'+width+'.png',fullPage:true});
+              const palette=()=>page.evaluate(()=>['header','.terminal'].map(s=>{const c=getComputedStyle(document.querySelector(s));return c.backgroundColor+' '+c.backgroundImage}));
+              const lightPalette=await palette();
               const lightBackground=await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor);
               await page.locator('#studio-theme').click();
               if(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor)===lightBackground)failures.push('theme background did not change');
               if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme toggle failed');
+              await page.waitForTimeout(350);
+              const darkPalette=await palette();
+              if(lightPalette.some((v,i)=>v===darkPalette[i]))failures.push('header or terminal palette unchanged '+width);
+              await page.screenshot({path:'theme-dark-'+width+'.png',fullPage:true});
               await page.reload();
               if(await page.locator('html').getAttribute('data-theme')!=='dark')failures.push('theme persistence failed');
               await page.locator('#studio-theme').click();
@@ -138,4 +145,6 @@ jobs:
         if: always()
         with:
           name: wellbeing-browser-screenshots
-          path: wellbeing-*.png
+          path: |
+            wellbeing-*.png
+            theme-*.png
