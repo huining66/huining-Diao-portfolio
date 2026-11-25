@@ -1,0 +1,63 @@
+name: Portfolio quality checks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**.html'
+      - 'assets/**'
+      - '.github/workflows/site-check.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Validate pages, assets and responsive layouts
+        run: |
+          python3 -m http.server 8765 > /tmp/site.log 2>&1 &
+          node <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const failures=[];
+            for(const width of [1440,390]){
+              const page=await browser.newPage({viewport:{width,height:900}});
+              page.on('pageerror',e=>failures.push(String(e)));
+              for(const file of fs.readdirSync('.').filter(x=>x.endsWith('.html'))){
+                await page.goto('http://localhost:8765/'+file);
+                const issues=await page.evaluate(async()=>{
+                  const errors=[];
+                  if(document.documentElement.scrollWidth>innerWidth+2)errors.push('horizontal overflow');
+                  for(const img of document.images){img.loading='eager';try{await img.decode()}catch{errors.push('image: '+img.src)}}
+                  for(const a of document.querySelectorAll('a[href]')){
+                    const u=new URL(a.href);
+                    if(u.origin!==location.origin)continue;
+                    const res=await fetch(u.pathname);
+                    if(!res.ok)errors.push('link: '+a.href);
+                    if(u.hash&&u.pathname===location.pathname&&!document.getElementById(decodeURIComponent(u.hash.slice(1))))errors.push('anchor: '+a.href);
+                  }
+                  return errors;
+                });
+                failures.push(...issues.map(e=>width+' '+file+' '+e));
+                console.log(width,file,issues.length?'FAIL':'PASS');
+              }
+              await page.goto('http://localhost:8765/research-lab.html');
+              const before=await page.locator('#portfolio').textContent();
+              await page.locator('#weight').fill('80');
+              if(before===await page.locator('#portfolio').textContent())failures.push('allocation output unchanged');
+              await page.goto('http://localhost:8765/dashboard.html');
+              await page.locator('#filter').selectOption('One year');
+              if(!(await page.locator('#metrics').textContent()).includes('1,473'))failures.push('dashboard annual contract count incorrect');
+              await page.close();
+            }
+            await browser.close();
+            if(failures.length){console.error(failures.join('\n'));process.exitCode=1}
+          })().catch(e=>{console.error(e);process.exitCode=1});
+          JS
