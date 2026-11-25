@@ -1,6 +1,14 @@
-| [home page](https://huining66.github.io/huining-Diao-portfolio/) | [data viz examples](dataviz-examples) | [critique by design](critique-by-design) | [final project I](final-project-part-one) | [final project II](final-project-part-two) | [final project III](final-project-part-three) |
+[← Back to Portfolio](./) | [Part I — Research Design](final-project-part-one) | [Part II — Visualization & User Research](final-project-part-two)
 
-# The Final Data Story
+# Working Hours & Global Well-being
+
+### Part III — Final Analysis & Design Iteration
+
+**Economic Analysis · Visual Communication · Research Publication**
+
+Huining Diao | Carnegie Mellon University | 2026
+
+## Final Research Publication
 
 My final interactive data story can be viewed here:
 
@@ -14,7 +22,7 @@ The final story uses a scrolling narrative format to guide readers through the t
 
 ---
 
-# Changes Made Since Part II
+## Design Iteration & Research Findings
 
 Since completing Part II, I made several important revisions based on feedback, self-review, and lessons learned during the design process.
 
@@ -40,7 +48,7 @@ Feedback from classmates during Part II suggested that shorter text, cleaner vis
 
 ---
 
-# The Audience
+## Audience & Communication Strategy
 
 The intended audience for this project is college students, graduate students, young professionals, and general readers interested in careers, productivity, lifestyle choices, and quality of life.
 
@@ -62,7 +70,7 @@ Based on peer feedback, I learned that readers responded best when the charts we
 
 ---
 
-# Final Design Decisions
+## Final Design Decisions
 
 Several design choices were especially important in shaping the final project.
 
@@ -88,7 +96,21 @@ One of the biggest lessons I learned is that good charts alone are not enough. E
 
 ---
 
-# References
+## Portfolio Extension — 2023 Cross-country Analysis
+
+A separate post-project analysis uses 120 matched country observations from 2023. The Pearson correlation between annual working hours and life satisfaction is −0.476, indicating a negative descriptive association.
+
+![Working hours and life satisfaction](06-working-hours-scatter.png)
+
+This analysis does not establish causation. Income, institutions, social support, employment composition and measurement differences may contribute to the observed pattern. Country averages cannot establish individual-level effects.
+
+[Explore all three updated charts and methods](final-project-part-two) · [Download matched data](matched-data.csv)
+
+Sources: [Our World in Data — Life satisfaction](https://ourworldindata.org/grapher/happiness-cantril-ladder) and [Annual working hours](https://ourworldindata.org/grapher/annual-working-hours-per-worker).
+
+The extension is separate from the original Shorthand publication and was prepared with ChatGPT assistance.
+
+## References
 
 OECD. Hours Worked Dataset.  
 https://data.oecd.org/emp/hours-worked.htm
@@ -106,7 +128,7 @@ Additional detailed references and source notes are also included in the final S
 
 ---
 
-# AI Acknowledgements
+## AI Acknowledgements
 
 I used Microsoft Copilot during this project for brainstorming topic ideas, improving grammar, organizing written sections, and refining wording for clarity. Copilot was also used to help structure presentation materials, including slide organization and draft PowerPoint content for the in-class presentation.
 
@@ -114,7 +136,7 @@ AI tools were mainly used during planning and editing stages rather than for fin
 
 ---
 
-# Final Thoughts
+## Reflection & Future Research
 
 Overall, I am proud of how this project developed from an early concept into a complete final data story.
 
@@ -125,3 +147,10 @@ The most rewarding part of the project was transforming raw numbers into a story
 If I had more time, I would explore additional variables such as income, vacation time, healthcare access, and social support. I would also add more interactive features that allow readers to compare countries directly.
 
 This project helped me better understand that successful data storytelling combines analysis, design, and empathy for the audience.
+
+
+---
+
+ChatGPT also assisted with portfolio restructuring and the later quantitative extension.
+
+[← Return to Portfolio](./)
