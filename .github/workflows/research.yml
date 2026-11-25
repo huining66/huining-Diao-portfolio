@@ -29,7 +29,51 @@ jobs:
         if: always()
         with:
           name: ${{ matrix.script }}-results
+          if-no-files-found: warn
           path: |
             results.log
             output/
-            *.png
+            shap_summary.png
+            macro_scatter.png
+            macro_robust.png
+  publish:
+    name: Publish validated research visuals
+    needs: research
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: churn_xgb_shap-results
+          path: _generated/churn
+      - uses: actions/download-artifact@v4
+        with:
+          name: macro_market-results
+          path: _generated/macro
+      - uses: actions/download-artifact@v4
+        with:
+          name: financial_pipeline-results
+          path: _generated/pipeline
+      - name: Publish only successful, curated research outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/research data/research
+          cp _generated/churn/shap_summary.png assets/research/shap_summary.png
+          cp _generated/macro/macro_scatter.png assets/research/macro_scatter.png
+          cp _generated/macro/macro_robust.png assets/research/macro_robust.png
+          cp _generated/churn/output/model_metrics.csv data/research/model_metrics.csv
+          cp _generated/churn/output/model_metadata.json data/research/model_metadata.json
+          cp _generated/macro/output/macro_monthly.csv data/research/macro_monthly.csv
+          cp _generated/macro/output/macro_summary.json data/research/macro_summary.json
+          cp _generated/pipeline/output/monthly.csv data/research/market_monthly.csv
+          cp _generated/pipeline/output/pipeline_summary.json data/research/pipeline_summary.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/research data/research
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish executed and validated research artifacts"
+            git push
+          fi
