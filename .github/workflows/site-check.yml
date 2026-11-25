@@ -52,6 +52,29 @@ jobs:
               const before=await page.locator('#portfolio').textContent();
               await page.locator('#weight').fill('80');
               if(before===await page.locator('#portfolio').textContent())failures.push('allocation output unchanged');
+              const check=async(id,expected)=>{const actual=await page.locator('#'+id).textContent();if(!actual.includes(expected))failures.push(id+' expected '+expected+' got '+actual)};
+              await page.locator('#weight').fill('100');
+              await check('portfolio','8% return | 18% risk');
+              await page.locator('#discount').fill('10');
+              await page.locator('#growth').fill('2');
+              await check('dcf','
+              await page.locator('#filter').selectOption('One year');
+              if(!(await page.locator('#metrics').textContent()).includes('1,473'))failures.push('dashboard annual contract count incorrect');
+              await page.close();
+            }
+            await browser.close();
+            if(failures.length){console.error(failures.join('\n'));process.exitCode=1}
+          })().catch(e=>{console.error(e);process.exitCode=1});
+          JS
+);
+              await page.locator('#discount').fill('2');
+              await check('dcf','discount rate must exceed growth');
+              await check('ab','3 pp | z = 2.1');
+              await page.locator('#control').fill('1001');
+              await check('ab','Enter valid counts');
+              await check('var','$2,072.32');
+              await page.locator('#vol').fill('201');
+              await check('var','Enter valid portfolio');
               await page.goto('http://localhost:8765/dashboard.html');
               await page.locator('#filter').selectOption('One year');
               if(!(await page.locator('#metrics').textContent()).includes('1,473'))failures.push('dashboard annual contract count incorrect');
