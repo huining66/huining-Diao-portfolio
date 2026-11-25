@@ -1,0 +1,10 @@
+{
+  "observations": 506,
+  "start_date": "2015-02-17",
+  "end_date": "2017-02-16",
+  "total_return": 0.10125484139189034,
+  "annualized_volatility": 0.24266164934806872,
+  "maximum_drawdown": -0.3044378451788451,
+  "monthly_rows": 25,
+  "source": "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv"
+}

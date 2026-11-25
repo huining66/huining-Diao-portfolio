@@ -1,0 +1,13 @@
+{
+  "n_months": 117,
+  "start_month": "2016-12-01",
+  "end_month": "2026-10-01",
+  "pearson_r_all": 0.16820038557927505,
+  "sensitivity_threshold_pp": 2.0,
+  "n_months_sensitivity": 115,
+  "pearson_r_sensitivity": -0.19994188835721968,
+  "excluded_months": [
+    "2020-04-01",
+    "2020-06-01"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "total_n": 7043,
+  "train_n": 5634,
+  "test_n": 1409,
+  "n_features_encoded": 44,
+  "test_split": 0.2,
+  "stratified": true,
+  "random_state": 42,
+  "evaluation": "single held-out split, no hyperparameter search",
+  "dataset": "IBM sample Telco Customer Churn"
+}
