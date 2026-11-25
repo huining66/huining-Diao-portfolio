@@ -231,7 +231,7 @@ BullionVault. *Live Gold Price Chart.*
 
 ## AI Disclosure
 
-ChatGPT was used to assist with organizing ideas and improving written communication. All original design work and design decisions are my own.
+ChatGPT was used to assist with organizing ideas, improving written communication, and restructuring the project documentation for professional presentation. All original design work and design decisions are my own.
 
 ---
 
