@@ -1,50 +1,59 @@
-# Huining Diao
+# Huining Diao | Professional Portfolio
 
-**Financial Markets · Data Science · Technology**
+**Financial Markets · Business Analytics · Data Science · Information Systems**
 
-Carnegie Mellon University — Master of Information Systems Management  
-The Ohio State University — B.A. Economics, Magna Cum Laude
+[Explore the live portfolio](https://huining66.github.io/huining-Diao-portfolio/)
 
-I explore how economic reasoning, quantitative analysis and information systems can turn complex data into actionable insights. My interests span financial markets, business analytics and technology strategy.
+Master's candidate at Carnegie Mellon University, Heinz College. Economics graduate of The Ohio State University, Magna Cum Laude.
 
-## Selected Work
+## Selected analytics projects
 
-### 01 / Gold Market Visualization
+| Project | Methods | Key results |
+|---|---|---|
+| [Equity Risk & Return](https://huining66.github.io/huining-Diao-portfolio/market-risk.html) | Python, historical risk metrics | 506 observations; 24.27% annualized volatility; −30.44% maximum drawdown |
+| [Customer Segmentation & Retention](https://huining66.github.io/huining-Diao-portfolio/customer-segments.html) | SQL, descriptive segmentation | 7,043 records; 42.7% month-to-month churn |
+| [Customer Churn Prediction](https://huining66.github.io/huining-Diao-portfolio/churn-model.html) | Logistic regression, held-out evaluation | ROC AUC 0.834; accuracy 78.4% |
+| [Gold Market Visualization](https://huining66.github.io/huining-Diao-portfolio/gold-market.html) | Financial visualization, exploratory feedback | Chart redesign and information hierarchy |
+| [Working Hours & Global Well-being](https://huining66.github.io/huining-Diao-portfolio/wellbeing.html) | Economic research, correlation | 120 countries; Pearson r = −0.476 |
 
-Financial data interpretation, visual analytics and information design.
+### Financial risk analysis
 
-A case study evaluating the clarity of a gold spot price chart and developing a redesign informed by exploratory user feedback.
+![Historical equity price chart](assets/market-risk.svg)
 
-[View case study →](critique-by-design)
+### Customer intelligence
 
-### 02 / Working Hours & Global Well-being
+![Contract-level churn rates](assets/customer-segments.svg)
 
-Python, cross-country economic research and statistical visualization.
+### Predictive analytics
 
-**120 countries · 2023 · Pearson r = −0.476**
+![Held-out confusion matrix](assets/churn-model.svg)
 
-![Cross-country analysis of working hours and life satisfaction](06-working-hours-scatter.png)
+## Reproduction resources
 
-An exploratory analysis of the association between annual working hours and life satisfaction, including regional comparisons and country-level deviations.
+- [Market risk — Python](analysis/market_risk.py)
+- [Customer segmentation — SQL](analysis/customer_segments.sql)
+- [Churn prediction — Python](analysis/churn_model.py)
+- [Economic research — matched dataset](matched-data.csv)
 
-[View analysis →](final-project-part-three) · [Download dataset](matched-data.csv)
+Projects use historical or illustrative public data. See each case study for sources, methodology, limitations and production notes. The three technical demonstrations were developed with AI assistance; Python/SQL reproduction scripts have not yet been independently executed.
 
-## Areas of Focus
+## Professional experience
 
-| Financial & economic analysis | Data & technology |
-| --- | --- |
-| Financial markets | Python and pandas |
-| Economic research | Data preparation and integration |
-| Business analytics | Exploratory statistical analysis |
-| Decision support | Data visualization and information systems |
+| Role | Focus |
+|---|---|
+| Data Analyst Intern | Customer and sales analytics, SQL, performance reporting |
+| Data Science Intern | Financial data preparation, workflow automation, data quality |
+| Financial Analyst Intern | Market research, company analysis, bond issuance support |
+
+## Technical toolkit
+
+**Data:** SQL, Python, Excel, Power BI, Tableau  
+**Technology:** Java, HTML, information systems  
+**Business:** Financial analysis, market research, project management, stakeholder communication
 
 ## Education
 
-**Carnegie Mellon University** — MISM, 2025–2026  
-**The Ohio State University** — B.A. Economics, minor in History, 2022–2025 · Magna Cum Laude
+- Carnegie Mellon University — Master of Information Systems Management, expected December 2026
+- The Ohio State University — B.A. Economics, minor in History, 2025; Magna Cum Laude
 
-## Connect
-
-[GitHub](https://github.com/huining66)
-
-© 2026 Huining Diao
+[Live portfolio](https://huining66.github.io/huining-Diao-portfolio/) · [GitHub profile](https://github.com/huining66)
