@@ -55,7 +55,7 @@ The [GitHub Actions workflow](.github/workflows/research.yml) installs dependenc
 
 Projects use historical or illustrative public data. See each case study for sources, methodology, limitations and production notes. AI-assisted tools supported source discovery, data preparation and technical implementation. Documented methods and reproducible code accompany research outputs where applicable. The three new advanced Python research pipelines were executed in GitHub Actions; older demonstration code and equivalent SQL scripts have not all been independently run. Results are descriptive and dataset-specific.
 
-OpenAI Codex helped identify and fix issues on this website.
+I created and maintain this portfolio. I used OpenAI Codex to help source and collect data for selected projects and to identify and fix issues on the website.
 
 ## Professional experience
 
