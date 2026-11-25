@@ -69,6 +69,34 @@ Rather than presenting isolated charts, the project uses a structured narrative 
 
 ---
 
+## Updated Quantitative Visualizations (Portfolio Extension)
+
+The following charts were developed after the original course project using a separate 2023 cross-country dataset. They illustrate the design improvements identified in the interviews; they were not themselves evaluated by those participants.
+
+The matched dataset contains 120 country observations. Annual hours worked per worker and life satisfaction (Cantril ladder, 0–10) have a Pearson correlation of −0.476. This is a descriptive association, not a causal estimate.
+
+### Working Hours and Life Satisfaction
+
+![Country-level scatter plot](06-working-hours-scatter.png)
+
+### Regional Comparison
+
+![Regional comparison](07-regional-comparison.png)
+
+Regional averages describe the available observations, not population-weighted estimates.
+
+### Country-level Deviations
+
+![Country-level outlier analysis](08-country-outliers.png)
+
+Deviations from the fitted relationship are starting points for further investigation, not evidence of specific causal mechanisms.
+
+[Download the matched dataset](matched-data.csv) · [Life satisfaction source](https://ourworldindata.org/grapher/happiness-cantril-ladder) · [Working hours source](https://ourworldindata.org/grapher/annual-working-hours-per-worker)
+
+The updated charts and dataset preparation were assisted by ChatGPT. The original draft figures below remain as documentation of the design process.
+
+---
+
 ## 02 — Storyboards & Wireframes
 
 Five initial storyboard concepts were developed to establish the visual structure, information hierarchy, and progression of the research narrative.
